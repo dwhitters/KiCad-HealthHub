@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP INA333
+F https://www.ti.com/lit/ds/symlink/ina333.pdf
+$ENDCMP
+#
+#End Doc Library
