@@ -4,7 +4,7 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "Power"
 Date ""
 Rev ""
 Comp ""
@@ -14,143 +14,195 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Regulator_Linear:L7805 U?
-U 1 1 5F977B65
-P 2050 1200
-F 0 "U?" H 2050 1442 50  0000 C CNN
-F 1 "L7805" H 2050 1351 50  0000 C CNN
-F 2 "" H 2075 1050 50  0001 L CIN
-F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 2050 1150 50  0001 C CNN
-	1    2050 1200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP1 C1
-U 1 1 5F97B8CA
-P 1550 1350
-F 0 "C1" H 1665 1396 50  0000 L CNN
-F 1 "100uF" H 1665 1305 50  0000 L CNN
-F 2 "" H 1550 1350 50  0001 C CNN
-F 3 "~" H 1550 1350 50  0001 C CNN
-	1    1550 1350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:CP1 C2
 U 1 1 5F980DB6
-P 2550 1350
-F 0 "C2" H 2665 1396 50  0000 L CNN
-F 1 "10uF" H 2665 1305 50  0000 L CNN
-F 2 "" H 2550 1350 50  0001 C CNN
-F 3 "~" H 2550 1350 50  0001 C CNN
-	1    2550 1350
+P 5825 2775
+F 0 "C2" H 5925 2875 50  0000 L CNN
+F 1 "10uF" H 5900 2700 50  0000 L CNN
+F 2 "" H 5825 2775 50  0001 C CNN
+F 3 "~" H 5825 2775 50  0001 C CNN
+	1    5825 2775
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:CP1 C3
 U 1 1 5F9833A5
-P 2900 1350
-F 0 "C3" H 3015 1396 50  0000 L CNN
-F 1 "100nF" H 3015 1305 50  0000 L CNN
-F 2 "" H 2900 1350 50  0001 C CNN
-F 3 "~" H 2900 1350 50  0001 C CNN
-	1    2900 1350
+P 6200 2775
+F 0 "C3" H 6315 2821 50  0000 L CNN
+F 1 "100nF" H 6315 2730 50  0000 L CNN
+F 2 "" H 6200 2775 50  0001 C CNN
+F 3 "~" H 6200 2775 50  0001 C CNN
+	1    6200 2775
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
-U 1 1 5F983C07
-P 2050 1500
-F 0 "#PWR?" H 2050 1250 50  0001 C CNN
-F 1 "GND" H 2055 1327 50  0000 C CNN
-F 2 "" H 2050 1500 50  0001 C CNN
-F 3 "" H 2050 1500 50  0001 C CNN
-	1    2050 1500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1550 1500 2050 1500
-Connection ~ 2050 1500
-Wire Wire Line
-	2900 1500 2550 1500
-Wire Wire Line
-	2050 1500 2550 1500
-Connection ~ 2550 1500
-Wire Wire Line
-	1550 1200 1750 1200
-Wire Wire Line
-	2350 1200 2550 1200
-Wire Wire Line
-	2900 1200 2550 1200
-Connection ~ 2550 1200
-$Comp
-L Mechanical:MountingHole_Pad 9V
+L Mechanical:MountingHole_Pad 9V1
 U 1 1 5F985E28
-P 1050 1200
-F 0 "9V" V 1150 1249 50  0000 L CNN
-F 1 "MountingHole_Pad" V 1150 1158 50  0001 L CNN
-F 2 "" H 1050 1200 50  0001 C CNN
-F 3 "~" H 1050 1200 50  0001 C CNN
-	1    1050 1200
+P 4375 2625
+F 0 "9V1" V 4381 2777 50  0000 L CNN
+F 1 "MountingHole_Pad" V 4475 2583 50  0001 L CNN
+F 2 "" H 4375 2625 50  0001 C CNN
+F 3 "~" H 4375 2625 50  0001 C CNN
+	1    4375 2625
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Mechanical:MountingHole_Pad GND
+L Mechanical:MountingHole_Pad GND1
 U 1 1 5F98A564
-P 1050 1500
-F 0 "GND" V 1150 1549 50  0000 L CNN
-F 1 "MountingHole_Pad" V 1150 1458 50  0001 L CNN
-F 2 "" H 1050 1500 50  0001 C CNN
-F 3 "~" H 1050 1500 50  0001 C CNN
-	1    1050 1500
+P 4375 2925
+F 0 "GND1" V 4475 2974 50  0000 L CNN
+F 1 "MountingHole_Pad" V 4475 2883 50  0001 L CNN
+F 2 "" H 4375 2925 50  0001 C CNN
+F 3 "~" H 4375 2925 50  0001 C CNN
+	1    4375 2925
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1150 1200 1550 1200
-Connection ~ 1550 1200
-Wire Wire Line
-	1550 1500 1150 1500
-Connection ~ 1550 1500
-Text Label 2900 1200 0    50   ~ 0
-5V
-Text Notes 1600 1950 0    118  ~ 0
+Text Notes 4936 3380 0    118  ~ 0
 Input Power
+Text Notes 4808 5084 0    50   ~ 0
+Voltage Reference
+Wire Notes Line
+	3960 2350 3960 5784
+Wire Notes Line
+	3960 5784 6958 5784
+Wire Notes Line
+	6958 5784 6958 2118
+Wire Notes Line
+	6958 2118 3960 2118
+Wire Notes Line
+	3960 2118 3960 2348
 $Comp
-L Reference_Voltage:ADR4525 U?
-U 1 1 5F98E0E5
-P 1800 3100
-F 0 "U?" V 1511 3100 50  0000 C CNN
-F 1 "ADR4525" V 1420 3100 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 1900 2800 50  0001 C CIN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADR4520_4525_4530_4533_4540_4550.pdf" H 1900 2750 50  0001 C CIN
-	1    1800 3100
-	0    -1   -1   0   
+L power:GND #PWR0102
+U 1 1 5F9A88EF
+P 5400 2925
+F 0 "#PWR0102" H 5400 2675 50  0001 C CNN
+F 1 "GND" H 5405 2752 50  0000 C CNN
+F 2 "" H 5400 2925 50  0001 C CNN
+F 3 "" H 5400 2925 50  0001 C CNN
+	1    5400 2925
+	1    0    0    -1  
 $EndComp
-Text Label 1400 3200 0    50   ~ 0
-5V
-Wire Wire Line
-	1400 3200 1500 3200
-Text Label 2200 3200 0    50   ~ 0
-GND
-Wire Wire Line
-	2100 3200 2200 3200
 $Comp
-L Device:CP1 C?
+L power:+9V #PWR0101
+U 1 1 5F9AB243
+P 4475 2625
+F 0 "#PWR0101" H 4475 2475 50  0001 C CNN
+F 1 "+9V" H 4490 2798 50  0000 C CNN
+F 2 "" H 4475 2625 50  0001 C CNN
+F 3 "" H 4475 2625 50  0001 C CNN
+	1    4475 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5F9B3B5D
+P 4875 2625
+F 0 "#FLG01" H 4875 2700 50  0001 C CNN
+F 1 "PWR_FLAG" H 4875 2798 50  0000 C CNN
+F 2 "" H 4875 2625 50  0001 C CNN
+F 3 "~" H 4875 2625 50  0001 C CNN
+	1    4875 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C4
 U 1 1 5F991542
-P 2200 3000
-F 0 "C?" H 2315 3046 50  0000 L CNN
-F 1 "1uF" H 2315 2955 50  0000 L CNN
-F 2 "" H 2200 3000 50  0001 C CNN
-F 3 "~" H 2200 3000 50  0001 C CNN
-	1    2200 3000
+P 5475 4475
+F 0 "C4" H 5590 4521 50  0000 L CNN
+F 1 "1uF" H 5590 4430 50  0000 L CNN
+F 2 "" H 5475 4475 50  0001 C CNN
+F 3 "~" H 5475 4475 50  0001 C CNN
+	1    5475 4475
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2200 3150 2200 3200
+	4825 4625 4750 4625
+Text GLabel 4750 4625 0    50   Input ~ 0
+5V
+$Comp
+L Reference_Voltage:ADR4525 U1
+U 1 1 5F98E0E5
+P 5125 4525
+F 0 "U1" V 4836 4525 50  0000 C CNN
+F 1 "ADR4525" V 4745 4525 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 5225 4225 50  0001 C CIN
+F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADR4520_4525_4530_4533_4540_4550.pdf" H 5225 4175 50  0001 C CIN
+	1    5125 4525
+	0    -1   -1   0   
+$EndComp
 Wire Wire Line
-	1800 2800 2200 2800
+	5125 4225 5475 4225
 Wire Wire Line
-	2200 2800 2200 2850
-Text Label 2200 2800 0    50   ~ 0
-2.5V
+	5475 4225 5475 4325
+$Comp
+L power:GND #PWR02
+U 1 1 5F9D2687
+P 5475 4625
+F 0 "#PWR02" H 5475 4375 50  0001 C CNN
+F 1 "GND" H 5480 4452 50  0000 C CNN
+F 2 "" H 5475 4625 50  0001 C CNN
+F 3 "" H 5475 4625 50  0001 C CNN
+	1    5475 4625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:L7805 U2
+U 1 1 5F977B65
+P 5400 2625
+F 0 "U2" H 5400 2867 50  0000 C CNN
+F 1 "L7805" H 5400 2776 50  0000 C CNN
+F 2 "" H 5425 2475 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 5400 2575 50  0001 C CNN
+	1    5400 2625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C1
+U 1 1 5F97B8CA
+P 4875 2775
+F 0 "C1" H 4990 2821 50  0000 L CNN
+F 1 "100uF" H 4950 2700 50  0000 L CNN
+F 2 "" H 4875 2775 50  0001 C CNN
+F 3 "~" H 4875 2775 50  0001 C CNN
+	1    4875 2775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4475 2925 4875 2925
+Connection ~ 4875 2925
+Wire Wire Line
+	5400 2925 4875 2925
+Connection ~ 5400 2925
+Wire Wire Line
+	4875 2625 4475 2625
+Connection ~ 4875 2625
+Connection ~ 4475 2625
+Wire Wire Line
+	4875 2625 5100 2625
+Wire Wire Line
+	5700 2625 5825 2625
+Wire Wire Line
+	5400 2925 5825 2925
+Wire Wire Line
+	6200 2925 5825 2925
+Connection ~ 5825 2925
+Wire Wire Line
+	6200 2625 5825 2625
+Connection ~ 5825 2625
+Text GLabel 6200 2625 2    50   Input Italic 0
+5V
+Wire Wire Line
+	5425 4625 5475 4625
+Connection ~ 5475 4625
+$Comp
+L power:PWR_FLAG #FLG?
+U 1 1 5F9F7887
+P 4875 2925
+F 0 "#FLG?" H 4875 3000 50  0001 C CNN
+F 1 "PWR_FLAG" H 4875 3098 50  0000 C CNN
+F 2 "" H 4875 2925 50  0001 C CNN
+F 3 "~" H 4875 2925 50  0001 C CNN
+	1    4875 2925
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC
