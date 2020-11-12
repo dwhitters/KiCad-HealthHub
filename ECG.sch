@@ -19,8 +19,8 @@ U 1 1 5F980DB6
 P 2750 2425
 F 0 "C2" H 2850 2525 50  0000 L CNN
 F 1 "10uF" H 2825 2350 50  0000 L CNN
-F 2 "" H 2750 2425 50  0001 C CNN
-F 3 "~" H 2750 2425 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_5x5.3" H 2750 2425 50  0001 C CNN
+F 3 "https://www.illinoiscapacitor.com/pdf/seriesDocuments/AXZ%20series.pdf" H 2750 2425 50  0001 C CNN
 	1    2750 2425
 	1    0    0    -1  
 $EndComp
@@ -30,7 +30,7 @@ U 1 1 5F9833A5
 P 3125 2425
 F 0 "C3" H 3240 2471 50  0000 L CNN
 F 1 "100nF" H 3240 2380 50  0000 L CNN
-F 2 "" H 3125 2425 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3125 2425 50  0001 C CNN
 F 3 "~" H 3125 2425 50  0001 C CNN
 	1    3125 2425
 	1    0    0    -1  
@@ -41,7 +41,7 @@ U 1 1 5F985E28
 P 1300 2275
 F 0 "9V1" V 1306 2427 50  0000 L CNN
 F 1 "MountingHole_Pad" V 1400 2233 50  0001 L CNN
-F 2 "" H 1300 2275 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6.5mm_Pad_Via" H 1300 2275 50  0001 C CNN
 F 3 "~" H 1300 2275 50  0001 C CNN
 	1    1300 2275
 	0    -1   -1   0   
@@ -52,7 +52,7 @@ U 1 1 5F98A564
 P 1300 2575
 F 0 "GND1" V 1400 2624 50  0000 L CNN
 F 1 "MountingHole_Pad" V 1400 2533 50  0001 L CNN
-F 2 "" H 1300 2575 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6mm_Pad_Via" H 1300 2575 50  0001 C CNN
 F 3 "~" H 1300 2575 50  0001 C CNN
 	1    1300 2575
 	0    -1   -1   0   
@@ -110,7 +110,7 @@ U 1 1 5F991542
 P 2400 4125
 F 0 "C4" H 2515 4171 50  0000 L CNN
 F 1 "1uF" H 2515 4080 50  0000 L CNN
-F 2 "" H 2400 4125 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 2400 4125 50  0001 C CNN
 F 3 "~" H 2400 4125 50  0001 C CNN
 	1    2400 4125
 	1    0    0    -1  
@@ -151,7 +151,7 @@ U 1 1 5F977B65
 P 2325 2275
 F 0 "U2" H 2325 2517 50  0000 C CNN
 F 1 "L7805" H 2325 2426 50  0000 C CNN
-F 2 "" H 2350 2125 50  0001 L CIN
+F 2 "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown" H 2350 2125 50  0001 L CIN
 F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 2325 2225 50  0001 C CNN
 	1    2325 2275
 	1    0    0    -1  
@@ -162,8 +162,8 @@ U 1 1 5F97B8CA
 P 1800 2425
 F 0 "C1" H 1915 2471 50  0000 L CNN
 F 1 "100uF" H 1875 2350 50  0000 L CNN
-F 2 "" H 1800 2425 50  0001 C CNN
-F 3 "~" H 1800 2425 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x3" H 1800 2425 50  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/860240575006.pdf" H 1800 2425 50  0001 C CNN
 	1    1800 2425
 	1    0    0    -1  
 $EndComp
@@ -228,47 +228,12 @@ Text GLabel 2400 3875 2    50   Input Italic 0
 Wire Wire Line
 	7375 3500 8375 3500
 $Comp
-L Mechanical:MountingHole_Pad Vo1
-U 1 1 5FA62E76
-P 10375 3500
-F 0 "Vo1" V 10381 3652 50  0000 L CNN
-F 1 "MountingHole_Pad" V 10475 3458 50  0001 L CNN
-F 2 "" H 10375 3500 50  0001 C CNN
-F 3 "~" H 10375 3500 50  0001 C CNN
-	1    10375 3500
-	0    1    1    0   
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad Pgnd1
-U 1 1 5FA63F5B
-P 10375 3800
-F 0 "Pgnd1" V 10381 3952 50  0000 L CNN
-F 1 "MountingHole_Pad" V 10475 3758 50  0001 L CNN
-F 2 "" H 10375 3800 50  0001 C CNN
-F 3 "~" H 10375 3800 50  0001 C CNN
-	1    10375 3800
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR03
-U 1 1 5FA65265
-P 10275 3800
-F 0 "#PWR03" H 10275 3550 50  0001 C CNN
-F 1 "GND" H 10280 3627 50  0000 C CNN
-F 2 "" H 10275 3800 50  0001 C CNN
-F 3 "" H 10275 3800 50  0001 C CNN
-	1    10275 3800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10275 3500 9450 3500
-$Comp
 L Mechanical:MountingHole_Pad P1
 U 1 1 5FA67DA7
 P 5650 3175
 F 0 "P1" V 5656 3327 50  0000 L CNN
 F 1 "MountingHole_Pad" V 5750 3133 50  0001 L CNN
-F 2 "" H 5650 3175 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6mm_Pad_Via" H 5650 3175 50  0001 C CNN
 F 3 "~" H 5650 3175 50  0001 C CNN
 	1    5650 3175
 	0    -1   -1   0   
@@ -279,7 +244,7 @@ U 1 1 5FA685AE
 P 5650 3425
 F 0 "P2" V 5656 3577 50  0000 L CNN
 F 1 "MountingHole_Pad" V 5750 3383 50  0001 L CNN
-F 2 "" H 5650 3425 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6mm_Pad_Via" H 5650 3425 50  0001 C CNN
 F 3 "~" H 5650 3425 50  0001 C CNN
 	1    5650 3425
 	0    -1   -1   0   
@@ -290,7 +255,7 @@ U 1 1 5FA686F5
 P 5650 3675
 F 0 "P3" V 5656 3827 50  0000 L CNN
 F 1 "MountingHole_Pad" V 5750 3633 50  0001 L CNN
-F 2 "" H 5650 3675 50  0001 C CNN
+F 2 "MountingHole:MountingHole_6mm_Pad_Via" H 5650 3675 50  0001 C CNN
 F 3 "~" H 5650 3675 50  0001 C CNN
 	1    5650 3675
 	0    -1   -1   0   
@@ -301,4 +266,52 @@ Wire Wire Line
 	5750 3425 6425 3425
 Wire Wire Line
 	6425 3675 5750 3675
+Wire Wire Line
+	10250 3500 9450 3500
+$Comp
+L Mechanical:MountingHole_Pad Vo1
+U 1 1 5FA62E76
+P 10350 3500
+F 0 "Vo1" V 10356 3652 50  0000 L CNN
+F 1 "MountingHole_Pad" V 10450 3458 50  0001 L CNN
+F 2 "MountingHole:MountingHole_6mm_Pad_Via" H 10350 3500 50  0001 C CNN
+F 3 "~" H 10350 3500 50  0001 C CNN
+	1    10350 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5FA65265
+P 10250 4000
+F 0 "#PWR03" H 10250 3750 50  0001 C CNN
+F 1 "GND" H 10255 3827 50  0000 C CNN
+F 2 "" H 10250 4000 50  0001 C CNN
+F 3 "" H 10250 4000 50  0001 C CNN
+	1    10250 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad Pgnd1
+U 1 1 5FA63F5B
+P 10350 4000
+F 0 "Pgnd1" V 10356 4152 50  0000 L CNN
+F 1 "MountingHole_Pad" V 10450 3958 50  0001 L CNN
+F 2 "MountingHole:MountingHole_6mm_Pad_Via" H 10350 4000 50  0001 C CNN
+F 3 "~" H 10350 4000 50  0001 C CNN
+	1    10350 4000
+	0    1    1    0   
+$EndComp
+Text GLabel 10250 3650 0    50   Input ~ 0
+2.5V
+$Comp
+L Mechanical:MountingHole_Pad Pgnd2
+U 1 1 5F9A2825
+P 10350 3650
+F 0 "Pgnd2" V 10356 3802 50  0000 L CNN
+F 1 "MountingHole_Pad" V 10450 3608 50  0001 L CNN
+F 2 "MountingHole:MountingHole_6mm_Pad_Via" H 10350 3650 50  0001 C CNN
+F 3 "~" H 10350 3650 50  0001 C CNN
+	1    10350 3650
+	0    1    1    0   
+$EndComp
 $EndSCHEMATC
