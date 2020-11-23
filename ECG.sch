@@ -74,14 +74,14 @@ Wire Wire Line
 	2350 4275 2400 4275
 Connection ~ 2400 4275
 $Sheet
-S 6425 2800 950  1425
+S 6425 2800 975  1400
 U 5F9F8A5A
 F0 "Probes" 50
 F1 "Probes.sch" 50
-F2 "Vprobe" O R 7375 3500 50 
-F3 "P1in" I L 6425 3175 50 
-F4 "P2in" I L 6425 3425 50 
-F5 "P3in" I L 6425 3675 50 
+F2 "Vprobe" O R 7400 3500 50 
+F3 "P1in" I L 6425 3200 50 
+F4 "P2in" I L 6425 3350 50 
+F5 "P3in" I L 6425 3500 50 
 $EndSheet
 $Sheet
 S 8375 2800 1075 1400
@@ -95,45 +95,6 @@ Text GLabel 2400 3900 2    50   Input Italic 0
 2.5V
 Wire Wire Line
 	7375 3500 8375 3500
-$Comp
-L Mechanical:MountingHole_Pad P1
-U 1 1 5FA67DA7
-P 5650 3175
-F 0 "P1" V 5656 3327 50  0000 L CNN
-F 1 "MountingHole_Pad" V 5750 3133 50  0001 L CNN
-F 2 "MountingHole:MountingHole_6mm_Pad_Via" H 5650 3175 50  0001 C CNN
-F 3 "~" H 5650 3175 50  0001 C CNN
-	1    5650 3175
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad P2
-U 1 1 5FA685AE
-P 5650 3425
-F 0 "P2" V 5656 3577 50  0000 L CNN
-F 1 "MountingHole_Pad" V 5750 3383 50  0001 L CNN
-F 2 "MountingHole:MountingHole_6mm_Pad_Via" H 5650 3425 50  0001 C CNN
-F 3 "~" H 5650 3425 50  0001 C CNN
-	1    5650 3425
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Mechanical:MountingHole_Pad P3
-U 1 1 5FA686F5
-P 5650 3675
-F 0 "P3" V 5656 3827 50  0000 L CNN
-F 1 "MountingHole_Pad" V 5750 3633 50  0001 L CNN
-F 2 "MountingHole:MountingHole_6mm_Pad_Via" H 5650 3675 50  0001 C CNN
-F 3 "~" H 5650 3675 50  0001 C CNN
-	1    5650 3675
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	5750 3175 6425 3175
-Wire Wire Line
-	5750 3425 6425 3425
-Wire Wire Line
-	6425 3675 5750 3675
 Wire Wire Line
 	10250 3500 9450 3500
 $Comp
@@ -271,9 +232,6 @@ F 3 "~" V 1400 2910 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 2650 2150 2800
-Connection ~ 2150 2650
-Wire Wire Line
 	1400 2650 1600 2650
 $Comp
 L power:GND #PWR010
@@ -362,4 +320,100 @@ F 3 "~" H 3350 2100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 3350 2100
+Text GLabel 2150 2800 0    50   Input ~ 0
+SHDN
+Text GLabel 6125 3900 2    50   Input ~ 0
+SHDN
+$Comp
+L Device:R R?
+U 1 1 5FBC4C0E
+P 5900 3900
+F 0 "R?" V 5693 3900 50  0000 C CNN
+F 1 "1k" V 5784 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5830 3900 50  0001 C CNN
+F 3 "~" H 5900 3900 50  0001 C CNN
+	1    5900 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6125 3900 6050 3900
+Text GLabel 5350 4000 2    50   Input ~ 0
+5V
+$Comp
+L power:GND #PWR?
+U 1 1 5FBD650D
+P 5550 3750
+F 0 "#PWR?" H 5550 3500 50  0001 C CNN
+F 1 "GND" H 5650 3750 50  0000 C CNN
+F 2 "" H 5550 3750 50  0001 C CNN
+F 3 "" H 5550 3750 50  0001 C CNN
+	1    5550 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FBD4F8F
+P 5675 4200
+F 0 "#PWR?" H 5675 3950 50  0001 C CNN
+F 1 "GND" H 5680 4027 50  0000 C CNN
+F 2 "" H 5675 4200 50  0001 C CNN
+F 3 "" H 5675 4200 50  0001 C CNN
+	1    5675 4200
+	1    0    0    -1  
+$EndComp
+Connection ~ 5675 3900
+Wire Wire Line
+	5750 3900 5675 3900
+Wire Wire Line
+	5550 3350 6430 3350
+$Comp
+L Device:C C?
+U 1 1 5FBC41CD
+P 5675 4050
+F 0 "C?" H 5790 4096 50  0000 L CNN
+F 1 "1n" H 5790 4005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5713 3900 50  0001 C CNN
+F 3 "~" H 5675 4050 50  0001 C CNN
+	1    5675 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Audio_Connectors:SJ-3566AN J?
+U 1 1 5FBB1E3E
+P 4950 3300
+F 0 "J?" H 5059 3667 50  0000 C CNN
+F 1 "SJ-3566AN" H 5059 3576 50  0000 C CNN
+F 2 "CUI_SJ-3566AN" H 4950 3300 50  0001 L BNN
+F 3 "" H 4950 3300 50  0001 L BNN
+F 4 "Manufacturer recommendations" H 4950 3300 50  0001 L BNN "STANDARD"
+F 5 "" H 4950 3300 50  0001 L BNN "PARTREV"
+F 6 "CUI Inc" H 4950 3300 50  0001 L BNN "MF"
+	1    4950 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3350 5550 3400
+Wire Wire Line
+	5500 3500 5500 3300
+Wire Wire Line
+	5500 3500 6430 3500
+Wire Wire Line
+	5400 3800 5400 3750
+Wire Wire Line
+	5400 3750 5550 3750
+Wire Wire Line
+	5350 3800 5356 3800
+Connection ~ 5356 3800
+Wire Wire Line
+	5356 3800 5400 3800
+Wire Wire Line
+	5350 3900 5675 3900
+Wire Wire Line
+	5350 3300 5500 3300
+Wire Wire Line
+	5350 3400 5550 3400
+Wire Wire Line
+	5350 3200 6430 3200
+Text Notes 1850 3100 0    50   ~ 0
+SHDN Active LOW\n
 $EndSCHEMATC
