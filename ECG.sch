@@ -441,7 +441,7 @@ L Device:R R21
 U 1 1 5FBCD069
 P 2400 6650
 F 0 "R21" H 2470 6696 50  0000 L CNN
-F 1 "220" H 2470 6605 50  0000 L CNN
+F 1 "100" H 2470 6605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2330 6650 50  0001 C CNN
 F 3 "~" H 2400 6650 50  0001 C CNN
 	1    2400 6650
@@ -467,7 +467,7 @@ P 2250 6500
 F 0 "D2" H 2243 6245 50  0000 C CNN
 F 1 "LED" H 2243 6336 50  0000 C CNN
 F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2250 6500 50  0001 C CNN
-F 3 "~" H 2250 6500 50  0001 C CNN
+F 3 "http://www.qt-brightek.com/datasheet/QBLP601_series.pdf" H 2250 6500 50  0001 C CNN
 	1    2250 6500
 	-1   0    0    1   
 $EndComp
@@ -644,4 +644,77 @@ Wire Wire Line
 	9625 2975 9625 3100
 Wire Wire Line
 	7050 3500 7575 3500
+Text Notes 2350 6325 0    50   ~ 0
+Green\n
+$Comp
+L dk_Transistors-Bipolar-BJT-Single:MMBT3904-7-F Q1
+U 1 1 5FC76954
+P 4600 6100
+F 0 "Q1" H 4788 6153 60  0000 L CNN
+F 1 "MMBT3904-7-F" H 4788 6047 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 4800 6300 60  0001 L CNN
+F 3 "https://www.diodes.com/assets/Datasheets/ds30036.pdf" H 4800 6400 60  0001 L CNN
+F 4 "MMBT3904-FDICT-ND" H 4800 6500 60  0001 L CNN "Digi-Key_PN"
+F 5 "MMBT3904-7-F" H 4800 6600 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 4800 6700 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 4800 6800 60  0001 L CNN "Family"
+F 8 "https://www.diodes.com/assets/Datasheets/ds30036.pdf" H 4800 6900 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/diodes-incorporated/MMBT3904-7-F/MMBT3904-FDICT-ND/815727" H 4800 7000 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 40V 0.2A SMD SOT23-3" H 4800 7100 60  0001 L CNN "Description"
+F 11 "Diodes Incorporated" H 4800 7200 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 4800 7300 60  0001 L CNN "Status"
+	1    4600 6100
+	1    0    0    -1  
+$EndComp
+Text GLabel 8850 3500 1    50   Input ~ 0
+Vout
+Text GLabel 4400 6100 0    50   Input ~ 0
+Vout
+Text GLabel 4700 5900 1    50   Input ~ 0
+5V
+$Comp
+L Device:R R26
+U 1 1 5FC7A644
+P 4700 6750
+F 0 "R26" H 4770 6796 50  0000 L CNN
+F 1 "150" H 4770 6705 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 4630 6750 50  0001 C CNN
+F 3 "~" H 4700 6750 50  0001 C CNN
+	1    4700 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5FC7B21A
+P 4700 6450
+F 0 "D3" V 4739 6332 50  0000 R CNN
+F 1 "LED" V 4648 6332 50  0000 R CNN
+F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4700 6450 50  0001 C CNN
+F 3 "https://www.we-online.de/katalog/datasheet/150060RS75000.pdf" H 4700 6450 50  0001 C CNN
+	1    4700 6450
+	0    -1   -1   0   
+$EndComp
+Text Notes 4975 6550 0    50   ~ 0
+Red
+$Comp
+L power:GND #PWR03
+U 1 1 5FC7D95F
+P 4700 6900
+F 0 "#PWR03" H 4700 6650 50  0001 C CNN
+F 1 "GND" H 4705 6727 50  0000 C CNN
+F 2 "" H 4700 6900 50  0001 C CNN
+F 3 "" H 4700 6900 50  0001 C CNN
+	1    4700 6900
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	4000 5650 5575 5650
+Wire Notes Line
+	5575 5650 5575 7275
+Wire Notes Line
+	5575 7275 4000 7275
+Wire Notes Line
+	4000 7275 4000 5650
+Text Notes 4375 7225 0    50   ~ 0
+Heartbeat Indicator\n
 $EndSCHEMATC
