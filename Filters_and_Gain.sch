@@ -36,7 +36,7 @@ F 3 "~" H 3725 2200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2825 2200 3575 2200
+	2825 2200 3175 2200
 $Comp
 L Device:CP1 C11
 U 1 1 5FA1693D
@@ -74,8 +74,6 @@ F 3 "https://www.ti.com/lit/ds/symlink/opa388.pdf" H 4975 2300 50  0001 C CNN
 	1    4975 2300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4575 2200 4450 2200
 Connection ~ 4050 2200
 $Comp
 L power:GND #PWR07
@@ -99,9 +97,6 @@ F 3 "~" H 5625 3175 50  0001 C CNN
 	1    5625 3175
 	1    0    0    -1  
 $EndComp
-Connection ~ 4450 2200
-Wire Wire Line
-	4450 2200 4050 2200
 $Comp
 L power:GND #PWR08
 U 1 1 5FA1CAD4
@@ -126,10 +121,6 @@ F 3 "~" H 4975 1450 50  0001 C CNN
 $EndComp
 Text GLabel 4975 1800 1    50   Input Italic 0
 5V
-Wire Wire Line
-	4825 1450 4450 1450
-Wire Wire Line
-	4450 1450 4450 2200
 Wire Wire Line
 	5125 1450 5625 1450
 Wire Wire Line
@@ -158,7 +149,7 @@ F 3 "~" H 5625 2575 50  0001 C CNN
 $EndComp
 Connection ~ 5625 3025
 Wire Wire Line
-	5625 1450 5625 2300
+	5625 1450 5625 1775
 Wire Wire Line
 	5625 2300 5625 2425
 Connection ~ 5625 2300
@@ -301,7 +292,7 @@ Wire Wire Line
 Wire Wire Line
 	3925 5925 4850 5925
 Wire Wire Line
-	4850 5925 4850 5150
+	4850 5925 4850 5400
 Wire Wire Line
 	4850 5150 4725 5150
 Text GLabel 4325 4650 1    50   Input Italic 0
@@ -456,4 +447,41 @@ Wire Wire Line
 Wire Wire Line
 	2350 2200 2525 2200
 Connection ~ 2350 2200
+Wire Wire Line
+	4050 2200 4575 2200
+Wire Wire Line
+	3175 1450 3175 2200
+Wire Wire Line
+	3175 1450 4825 1450
+Connection ~ 3175 2200
+Wire Wire Line
+	3175 2200 3575 2200
+$Comp
+L Connector:TestPoint TP18
+U 1 1 5FCA32EA
+P 5625 1775
+F 0 "TP18" V 5579 1963 50  0000 L CNN
+F 1 "TestPoint" V 5670 1963 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5825 1775 50  0001 C CNN
+F 3 "~" H 5825 1775 50  0001 C CNN
+	1    5625 1775
+	0    1    1    0   
+$EndComp
+Connection ~ 5625 1775
+Wire Wire Line
+	5625 1775 5625 2300
+$Comp
+L Connector:TestPoint TP17
+U 1 1 5FCA48ED
+P 4850 5400
+F 0 "TP17" V 4804 5588 50  0000 L CNN
+F 1 "TestPoint" V 4895 5588 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5050 5400 50  0001 C CNN
+F 3 "~" H 5050 5400 50  0001 C CNN
+	1    4850 5400
+	0    1    1    0   
+$EndComp
+Connection ~ 4850 5400
+Wire Wire Line
+	4850 5400 4850 5150
 $EndSCHEMATC

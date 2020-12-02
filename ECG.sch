@@ -54,7 +54,7 @@ F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/ADR4520
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2050 3875 2400 3875
+	2050 3875 2200 3875
 Wire Wire Line
 	2400 3875 2400 3975
 $Comp
@@ -220,7 +220,7 @@ Connection ~ 2150 2500
 Wire Wire Line
 	2650 2100 3350 2100
 Wire Wire Line
-	3350 2100 3350 2650
+	3350 2100 3350 2325
 Wire Wire Line
 	3350 2650 3250 2650
 Wire Wire Line
@@ -364,8 +364,6 @@ Wire Wire Line
 	5200 3350 5400 3350
 Wire Wire Line
 	5150 3500 5550 3500
-Wire Wire Line
-	6100 3200 5000 3200
 $Comp
 L power:PWR_FLAG #FLG0104
 U 1 1 5FBE011F
@@ -390,8 +388,6 @@ F 3 "~" H 5400 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 5400 3350
-Wire Wire Line
-	5400 3350 6100 3350
 $Comp
 L power:PWR_FLAG #FLG02
 U 1 1 5FBE0E73
@@ -404,8 +400,6 @@ F 3 "~" H 5550 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 5550 3500
-Wire Wire Line
-	5550 3500 6100 3500
 $Comp
 L Switches:OS102011MS2QN1 S1
 U 1 1 5FBC1FC8
@@ -584,7 +578,7 @@ Wire Wire Line
 	10300 3700 10775 3700
 Connection ~ 10300 3700
 Wire Wire Line
-	10300 3600 10775 3600
+	10300 3600 10575 3600
 Wire Wire Line
 	10300 3600 10025 3600
 Connection ~ 10300 3600
@@ -604,7 +598,7 @@ F 3 "" H 10025 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	8650 3500 9225 3500
+	8650 3500 8925 3500
 Text GLabel 9225 3600 0    50   Input ~ 0
 2.5V
 $Comp
@@ -631,8 +625,6 @@ Text GLabel 9025 4150 3    50   Input ~ 0
 5V
 Text Notes 8825 4425 0    50   ~ 0
 Tie to supply to reduce leakage currents.
-Text Notes 8575 4550 0    50   ~ 0
-Should I have some sort of resistance on the 2.5V input?\n
 Wire Wire Line
 	9925 2800 10325 2800
 Wire Wire Line
@@ -717,4 +709,229 @@ Wire Notes Line
 	4000 7275 4000 5650
 Text Notes 4375 7225 0    50   ~ 0
 Heartbeat Indicator\n
+Wire Wire Line
+	5000 3200 5750 3200
+Wire Wire Line
+	5400 3350 5850 3350
+Wire Wire Line
+	5550 3500 5975 3500
+$Comp
+L Connector:TestPoint TP11
+U 1 1 5FC76706
+P 5975 2575
+F 0 "TP11" H 6033 2693 50  0000 L CNN
+F 1 "TestPoint" H 6033 2602 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 6175 2575 50  0001 C CNN
+F 3 "~" H 6175 2575 50  0001 C CNN
+	1    5975 2575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP10
+U 1 1 5FC772A9
+P 5850 2575
+F 0 "TP10" H 5908 2693 50  0000 L CNN
+F 1 "TestPoint" H 5908 2602 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 6050 2575 50  0001 C CNN
+F 3 "~" H 6050 2575 50  0001 C CNN
+	1    5850 2575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 5FC7781D
+P 5750 2575
+F 0 "TP8" H 5808 2693 50  0000 L CNN
+F 1 "TestPoint" H 5808 2602 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5950 2575 50  0001 C CNN
+F 3 "~" H 5950 2575 50  0001 C CNN
+	1    5750 2575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 2575 5750 3200
+Connection ~ 5750 3200
+Wire Wire Line
+	5750 3200 6100 3200
+Wire Wire Line
+	5850 2575 5850 3350
+Connection ~ 5850 3350
+Wire Wire Line
+	5850 3350 6100 3350
+Wire Wire Line
+	5975 2575 5975 3500
+Connection ~ 5975 3500
+Wire Wire Line
+	5975 3500 6100 3500
+$Comp
+L Connector:TestPoint TP9
+U 1 1 5FC7C756
+P 5775 4400
+F 0 "TP9" V 5729 4588 50  0000 L CNN
+F 1 "TestPoint" V 5820 4588 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5975 4400 50  0001 C CNN
+F 3 "~" H 5975 4400 50  0001 C CNN
+	1    5775 4400
+	0    1    1    0   
+$EndComp
+Connection ~ 5775 4400
+$Comp
+L Connector:TestPoint TP6
+U 1 1 5FC7D0FE
+P 4875 6325
+F 0 "TP6" V 4829 6513 50  0000 L CNN
+F 1 "TestPoint" V 4920 6513 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5075 6325 50  0001 C CNN
+F 3 "~" H 5075 6325 50  0001 C CNN
+	1    4875 6325
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 5FC7E935
+P 4475 6575
+F 0 "TP5" V 4670 6647 50  0000 C CNN
+F 1 "TestPoint" V 4579 6647 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 4675 6575 50  0001 C CNN
+F 3 "~" H 4675 6575 50  0001 C CNN
+	1    4475 6575
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4700 6600 4475 6600
+Wire Wire Line
+	4475 6600 4475 6575
+Connection ~ 4700 6600
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5FC8361A
+P 2725 6500
+F 0 "TP3" H 2783 6618 50  0000 L CNN
+F 1 "TestPoint" H 2783 6527 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 2925 6500 50  0001 C CNN
+F 3 "~" H 2925 6500 50  0001 C CNN
+	1    2725 6500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2725 6500 2400 6500
+Connection ~ 2400 6500
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5FC87C23
+P 2200 3875
+F 0 "TP2" H 2258 3993 50  0000 L CNN
+F 1 "TestPoint" H 2258 3902 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 2400 3875 50  0001 C CNN
+F 3 "~" H 2400 3875 50  0001 C CNN
+	1    2200 3875
+	1    0    0    -1  
+$EndComp
+Connection ~ 2200 3875
+Wire Wire Line
+	2200 3875 2400 3875
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5FC8907B
+P 3350 2325
+F 0 "TP4" V 3304 2513 50  0000 L CNN
+F 1 "TestPoint" V 3395 2513 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 3550 2325 50  0001 C CNN
+F 3 "~" H 3550 2325 50  0001 C CNN
+	1    3350 2325
+	0    1    1    0   
+$EndComp
+Connection ~ 3350 2325
+Wire Wire Line
+	3350 2325 3350 2650
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5FC8A574
+P 1400 2650
+F 0 "TP1" H 1458 2768 50  0000 L CNN
+F 1 "TestPoint" H 1458 2677 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 1600 2650 50  0001 C CNN
+F 3 "~" H 1600 2650 50  0001 C CNN
+	1    1400 2650
+	1    0    0    -1  
+$EndComp
+Connection ~ 1400 2650
+$Comp
+L Connector:TestPoint TP7
+U 1 1 5FC8DB2C
+P 5025 4650
+F 0 "TP7" H 5083 4768 50  0000 L CNN
+F 1 "TestPoint" H 5083 4677 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5225 4650 50  0001 C CNN
+F 3 "~" H 5225 4650 50  0001 C CNN
+	1    5025 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5025 4650 5650 4650
+Wire Wire Line
+	5650 4725 5650 4650
+$Comp
+L Connector:TestPoint TP14
+U 1 1 5FC95E35
+P 10775 3275
+F 0 "TP14" H 10833 3393 50  0000 L CNN
+F 1 "TestPoint" H 10833 3302 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 10975 3275 50  0001 C CNN
+F 3 "~" H 10975 3275 50  0001 C CNN
+	1    10775 3275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP13
+U 1 1 5FC9653A
+P 10575 3275
+F 0 "TP13" H 10633 3393 50  0000 L CNN
+F 1 "TestPoint" H 10633 3302 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 10775 3275 50  0001 C CNN
+F 3 "~" H 10775 3275 50  0001 C CNN
+	1    10575 3275
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10575 3275 10575 3600
+Connection ~ 10575 3600
+Wire Wire Line
+	10575 3600 10775 3600
+Connection ~ 10775 3600
+Wire Wire Line
+	10775 3275 10775 3600
+$Comp
+L Connector:TestPoint TP12
+U 1 1 5FCA6AF9
+P 8925 3325
+F 0 "TP12" H 8983 3443 50  0000 L CNN
+F 1 "TestPoint" H 8983 3352 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9125 3325 50  0001 C CNN
+F 3 "~" H 9125 3325 50  0001 C CNN
+	1    8925 3325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8925 3325 8925 3500
+Connection ~ 8925 3500
+Wire Wire Line
+	8925 3500 9225 3500
+Wire Wire Line
+	4700 6300 4875 6300
+Wire Wire Line
+	4875 6300 4875 6325
+Connection ~ 4700 6300
+$Comp
+L Connector:TestPoint TP19
+U 1 1 5FCD9479
+P 3350 3000
+F 0 "TP19" H 3292 3026 50  0000 R CNN
+F 1 "TestPoint" H 3292 3117 50  0000 R CNN
+F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 3550 3000 50  0001 C CNN
+F 3 "~" H 3550 3000 50  0001 C CNN
+	1    3350 3000
+	-1   0    0    1   
+$EndComp
+Connection ~ 3350 3000
 $EndSCHEMATC

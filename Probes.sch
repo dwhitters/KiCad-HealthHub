@@ -212,7 +212,7 @@ F 3 "~" H 7250 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6450 3550 6700 3550
+	6450 3550 6550 3550
 Wire Wire Line
 	7000 3550 7250 3550
 Wire Wire Line
@@ -231,7 +231,7 @@ Wire Notes Line
 Wire Notes Line
 	6650 4325 6650 3200
 Wire Wire Line
-	8100 3550 7250 3550
+	8100 3550 7850 3550
 Connection ~ 7250 3550
 Text HLabel 8100 3550 2    50   Output Italic 0
 Vprobe
@@ -280,4 +280,32 @@ F 3 "~" H 3750 4125 50  0001 C CNN
 	1    3750 4125
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:TestPoint TP15
+U 1 1 5FC9DF1C
+P 6550 3550
+F 0 "TP15" H 6608 3668 50  0000 L CNN
+F 1 "TestPoint" H 6608 3577 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 6750 3550 50  0001 C CNN
+F 3 "~" H 6750 3550 50  0001 C CNN
+	1    6550 3550
+	1    0    0    -1  
+$EndComp
+Connection ~ 6550 3550
+Wire Wire Line
+	6550 3550 6700 3550
+$Comp
+L Connector:TestPoint TP16
+U 1 1 5FC9E5E5
+P 7850 3550
+F 0 "TP16" H 7908 3668 50  0000 L CNN
+F 1 "TestPoint" H 7908 3577 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 8050 3550 50  0001 C CNN
+F 3 "~" H 8050 3550 50  0001 C CNN
+	1    7850 3550
+	1    0    0    -1  
+$EndComp
+Connection ~ 7850 3550
+Wire Wire Line
+	7850 3550 7250 3550
 $EndSCHEMATC
