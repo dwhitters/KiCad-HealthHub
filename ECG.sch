@@ -39,7 +39,7 @@ F 3 "~" H 2400 4125 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 4275 1675 4275
+	1750 4275 1700 4275
 Text GLabel 1675 4275 0    50   Input ~ 0
 5V
 $Comp
@@ -936,4 +936,29 @@ Text GLabel 1400 2650 0    50   Input ~ 0
 Vbatt
 Text GLabel 5000 4000 3    50   Input ~ 0
 Vbatt
+$Comp
+L Device:C C24
+U 1 1 5FD00F60
+P 1700 4425
+F 0 "C24" H 1475 4400 50  0000 L CNN
+F 1 "100n" H 1425 4325 50  0000 L CNN
+F 2 "" H 1738 4275 50  0001 C CNN
+F 3 "~" H 1700 4425 50  0001 C CNN
+	1    1700 4425
+	1    0    0    -1  
+$EndComp
+Connection ~ 1700 4275
+Wire Wire Line
+	1700 4275 1675 4275
+$Comp
+L power:GND #PWR025
+U 1 1 5FD01730
+P 1700 4575
+F 0 "#PWR025" H 1700 4325 50  0001 C CNN
+F 1 "GND" H 1575 4475 50  0000 C CNN
+F 2 "" H 1700 4575 50  0001 C CNN
+F 3 "" H 1700 4575 50  0001 C CNN
+	1    1700 4575
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
