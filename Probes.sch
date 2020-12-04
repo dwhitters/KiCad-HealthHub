@@ -164,15 +164,15 @@ Wire Wire Line
 $Comp
 L power:GND #PWR01
 U 1 1 5FA062F9
-P 6100 4000
-F 0 "#PWR01" H 6100 3750 50  0001 C CNN
-F 1 "GND" H 6105 3827 50  0000 C CNN
-F 2 "" H 6100 4000 50  0001 C CNN
-F 3 "" H 6100 4000 50  0001 C CNN
-	1    6100 4000
+P 6100 4300
+F 0 "#PWR01" H 6100 4050 50  0001 C CNN
+F 1 "GND" H 6105 4127 50  0000 C CNN
+F 2 "" H 6100 4300 50  0001 C CNN
+F 3 "" H 6100 4300 50  0001 C CNN
+	1    6100 4300
 	1    0    0    -1  
 $EndComp
-Text GLabel 6100 3100 1    50   Input Italic 0
+Text GLabel 6100 2925 0    50   Input Italic 0
 5V
 $Comp
 L Device:R R6
@@ -194,7 +194,7 @@ L Device:CP1 C7
 U 1 1 5FA0C288
 P 6850 3550
 F 0 "C7" V 7102 3550 50  0000 C CNN
-F 1 "CP1" V 7011 3550 50  0000 C CNN
+F 1 "100u" V 7011 3550 50  0000 C CNN
 F 2 "Capacitor_THT:CP_Axial_L18.0mm_D8.0mm_P25.00mm_Horizontal" H 6850 3550 50  0001 C CNN
 F 3 "https://www.illinoiscapacitor.com/pdf/seriesDocuments/AXZ%20series.pdf" H 6850 3550 50  0001 C CNN
 	1    6850 3550
@@ -308,4 +308,46 @@ $EndComp
 Connection ~ 7850 3550
 Wire Wire Line
 	7850 3550 7250 3550
+$Comp
+L Device:C C17
+U 1 1 5FCAEA62
+P 6250 2925
+F 0 "C17" V 5998 2925 50  0000 C CNN
+F 1 "100n" V 6089 2925 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 6288 2775 50  0001 C CNN
+F 3 "~" H 6250 2925 50  0001 C CNN
+	1    6250 2925
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5FCB2A52
+P 6400 2925
+F 0 "#PWR018" H 6400 2675 50  0001 C CNN
+F 1 "GND" V 6405 2797 50  0000 R CNN
+F 2 "" H 6400 2925 50  0001 C CNN
+F 3 "" H 6400 2925 50  0001 C CNN
+	1    6400 2925
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6100 2925 6100 3100
+$Comp
+L Device:C C16
+U 1 1 5FCB8FF4
+P 5775 4150
+F 0 "C16" H 5950 4150 50  0000 C CNN
+F 1 "100n" H 5950 4225 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5813 4000 50  0001 C CNN
+F 3 "~" H 5775 4150 50  0001 C CNN
+	1    5775 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 4000 5775 4000
+Wire Wire Line
+	5775 4300 6100 4300
+Connection ~ 6100 4300
+Wire Wire Line
+	6100 4000 6100 4300
 $EndSCHEMATC

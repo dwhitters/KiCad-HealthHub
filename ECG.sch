@@ -287,8 +287,6 @@ F 3 "~" H 5550 3900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5775 3900 5700 3900
-Text GLabel 5000 4000 2    50   Input ~ 0
-5V
 $Comp
 L power:GND #PWR011
 U 1 1 5FBD650D
@@ -934,4 +932,8 @@ F 3 "~" H 3550 3000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Connection ~ 3350 3000
+Text GLabel 1400 2650 0    50   Input ~ 0
+Vbatt
+Text GLabel 5000 4000 3    50   Input ~ 0
+Vbatt
 $EndSCHEMATC
