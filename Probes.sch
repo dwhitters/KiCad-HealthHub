@@ -164,12 +164,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR01
 U 1 1 5FA062F9
-P 6100 4300
-F 0 "#PWR01" H 6100 4050 50  0001 C CNN
-F 1 "GND" H 6105 4127 50  0000 C CNN
-F 2 "" H 6100 4300 50  0001 C CNN
-F 3 "" H 6100 4300 50  0001 C CNN
-	1    6100 4300
+P 6100 4000
+F 0 "#PWR01" H 6100 3750 50  0001 C CNN
+F 1 "GND" H 6105 3827 50  0000 C CNN
+F 2 "" H 6100 4000 50  0001 C CNN
+F 3 "" H 6100 4000 50  0001 C CNN
+	1    6100 4000
 	1    0    0    -1  
 $EndComp
 Text GLabel 6100 2925 0    50   Input Italic 0
@@ -195,7 +195,7 @@ U 1 1 5FA0C288
 P 6850 3550
 F 0 "C7" V 7102 3550 50  0000 C CNN
 F 1 "100u" V 7011 3550 50  0000 C CNN
-F 2 "Capacitor_THT:CP_Axial_L18.0mm_D8.0mm_P25.00mm_Horizontal" H 6850 3550 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1210_3225Metric_Pad1.33x2.70mm_HandSolder" H 6850 3550 50  0001 C CNN
 F 3 "https://www.illinoiscapacitor.com/pdf/seriesDocuments/AXZ%20series.pdf" H 6850 3550 50  0001 C CNN
 	1    6850 3550
 	0    -1   -1   0   
@@ -219,7 +219,6 @@ Wire Wire Line
 	7250 3550 7250 3700
 Wire Wire Line
 	7250 4000 6100 4000
-Connection ~ 6100 4000
 Text Notes 6725 4225 0    50   Italic 0
 AC Couple\nCutoff Frequency: 0.3Hz
 Wire Notes Line
@@ -332,22 +331,5 @@ F 3 "" H 6400 2925 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6100 2925 6100 3100
-$Comp
-L Device:C C16
-U 1 1 5FCB8FF4
-P 5775 4150
-F 0 "C16" H 5950 4150 50  0000 C CNN
-F 1 "100n" H 5950 4225 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 5813 4000 50  0001 C CNN
-F 3 "~" H 5775 4150 50  0001 C CNN
-	1    5775 4150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6100 4000 5775 4000
-Wire Wire Line
-	5775 4300 6100 4300
-Connection ~ 6100 4300
-Wire Wire Line
-	6100 4000 6100 4300
+Connection ~ 6100 4000
 $EndSCHEMATC
