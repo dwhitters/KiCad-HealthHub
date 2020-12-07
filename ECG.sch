@@ -450,8 +450,6 @@ F 3 "" H 2400 6800 50  0001 C CNN
 	1    2400 6800
 	1    0    0    -1  
 $EndComp
-Text GLabel 2100 6500 0    50   Input ~ 0
-SHDN
 $Comp
 L Device:LED D2
 U 1 1 5FBD2826
@@ -523,17 +521,6 @@ F 2 "" H 10325 2800 50  0001 C CNN
 F 3 "" H 10325 2800 50  0001 C CNN
 	1    10325 2800
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x02_Male J2
-U 1 1 5FBFCC75
-P 10975 3700
-F 0 "J2" H 10947 3582 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 11525 3775 50  0000 R CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 10975 3700 50  0001 C CNN
-F 3 "~" H 10975 3700 50  0001 C CNN
-	1    10975 3700
-	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R23
@@ -878,7 +865,6 @@ Wire Wire Line
 Connection ~ 10575 3600
 Wire Wire Line
 	10575 3600 10775 3600
-Connection ~ 10775 3600
 Wire Wire Line
 	10775 3275 10775 3600
 $Comp
@@ -947,4 +933,29 @@ Text GLabel 9025 3700 0    50   Input ~ 0
 Vbatt
 Text GLabel 9025 3800 0    50   Input ~ 0
 2.5V
+Text GLabel 2100 6500 0    50   Input ~ 0
+5V
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 5FCF854F
+P 10975 3700
+F 0 "J2" H 11055 3742 50  0000 L CNN
+F 1 "Conn_01x03" H 11055 3651 50  0000 L CNN
+F 2 "Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical" H 10975 3700 50  0001 C CNN
+F 3 "~" H 10975 3700 50  0001 C CNN
+	1    10975 3700
+	1    0    0    -1  
+$EndComp
+Connection ~ 10775 3600
+$Comp
+L power:GND #PWR020
+U 1 1 5FCF90A6
+P 10775 3800
+F 0 "#PWR020" H 10775 3550 50  0001 C CNN
+F 1 "GND" H 10780 3627 50  0000 C CNN
+F 2 "" H 10775 3800 50  0001 C CNN
+F 3 "" H 10775 3800 50  0001 C CNN
+	1    10775 3800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
