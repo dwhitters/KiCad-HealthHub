@@ -560,10 +560,8 @@ Wire Wire Line
 Wire Wire Line
 	10300 3700 10300 3750
 Wire Wire Line
-	10300 3700 10775 3700
+	10300 3700 10575 3700
 Connection ~ 10300 3700
-Wire Wire Line
-	10300 3600 10575 3600
 Wire Wire Line
 	10300 3600 10025 3600
 Connection ~ 10300 3600
@@ -850,11 +848,6 @@ F 3 "~" H 10775 3275 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10575 3275 10575 3600
-Connection ~ 10575 3600
-Wire Wire Line
-	10575 3600 10775 3600
-Wire Wire Line
 	10775 3275 10775 3600
 $Comp
 L Connector:TestPoint TP12
@@ -930,7 +923,7 @@ U 1 1 5FCF854F
 P 10975 3700
 F 0 "J2" H 11055 3742 50  0000 L CNN
 F 1 "Conn_01x03" H 11055 3651 50  0000 L CNN
-F 2 "Connector_PinHeader_1.00mm:PinHeader_1x03_P1.00mm_Vertical" H 10975 3700 50  0001 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical" H 10975 3700 50  0001 C CNN
 F 3 "~" H 10975 3700 50  0001 C CNN
 	1    10975 3700
 	1    0    0    -1  
@@ -958,4 +951,11 @@ Connection ~ 5850 3350
 Wire Wire Line
 	6075 3500 5975 3500
 Connection ~ 5975 3500
+Connection ~ 10575 3700
+Wire Wire Line
+	10575 3700 10775 3700
+Wire Wire Line
+	10300 3600 10775 3600
+Wire Wire Line
+	10575 3275 10575 3700
 $EndSCHEMATC
