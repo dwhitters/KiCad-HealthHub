@@ -79,9 +79,9 @@ U 5F9F8A5A
 F0 "Probes" 50
 F1 "Probes.sch" 50
 F2 "Vprobe" O R 7050 3500 50 
-F3 "P1in" I L 6075 3200 50 
-F4 "P2in" I L 6075 3350 50 
-F5 "P3in" I L 6075 3500 50 
+F3 "P2in" I L 6075 3350 50 
+F4 "P3in" I L 6075 3500 50 
+F5 "P1in" I L 6075 3200 50 
 $EndSheet
 $Sheet
 S 7575 2800 1075 1400
@@ -717,19 +717,8 @@ F 3 "~" H 5950 2575 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5750 2575 5750 3200
-Connection ~ 5750 3200
-Wire Wire Line
-	5750 3200 6100 3200
-Wire Wire Line
-	5850 2575 5850 3350
-Connection ~ 5850 3350
-Wire Wire Line
-	5850 3350 6100 3350
 Wire Wire Line
 	5975 2575 5975 3500
-Connection ~ 5975 3500
-Wire Wire Line
-	5975 3500 6100 3500
 $Comp
 L Connector:TestPoint TP9
 U 1 1 5FC7C756
@@ -958,4 +947,15 @@ F 3 "" H 10775 3800 50  0001 C CNN
 	1    10775 3800
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	6075 3200 5750 3200
+Connection ~ 5750 3200
+Wire Wire Line
+	5850 2575 5850 3350
+Wire Wire Line
+	6075 3350 5850 3350
+Connection ~ 5850 3350
+Wire Wire Line
+	6075 3500 5975 3500
+Connection ~ 5975 3500
 $EndSCHEMATC

@@ -80,10 +80,6 @@ F 3 "~" H 4750 4050 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	3750 3325 4025 3325
-Wire Wire Line
-	3750 3725 4025 3725
-Wire Wire Line
 	4425 3325 4525 3325
 Wire Wire Line
 	4525 3325 4525 2900
@@ -150,14 +146,12 @@ Wire Wire Line
 Wire Wire Line
 	5675 3450 5475 3450
 Wire Wire Line
-	5025 3325 5300 3325
+	5025 3325 5175 3325
 Wire Wire Line
 	5300 3325 5300 3700
 Wire Wire Line
 	5300 3700 5750 3700
 Connection ~ 5025 3325
-Wire Wire Line
-	5025 3850 5750 3850
 Connection ~ 5025 3850
 Wire Wire Line
 	5025 3850 5025 3725
@@ -177,15 +171,15 @@ Text GLabel 6100 2925 0    50   Input Italic 0
 $Comp
 L Device:R R6
 U 1 1 5FA0AABB
-P 3900 4125
-F 0 "R6" V 3693 4125 50  0000 C CNN
-F 1 "68K" V 3784 4125 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3830 4125 50  0001 C CNN
-F 3 "~" H 3900 4125 50  0001 C CNN
-	1    3900 4125
+P 4050 4125
+F 0 "R6" V 3843 4125 50  0000 C CNN
+F 1 "68K" V 3934 4125 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3980 4125 50  0001 C CNN
+F 3 "~" H 4050 4125 50  0001 C CNN
+	1    4050 4125
 	0    1    1    0   
 $EndComp
-Text GLabel 4050 4125 2    50   Input Italic 0
+Text GLabel 4200 4125 2    50   Input Italic 0
 2.5V
 Text Notes 3425 4300 0    50   Italic 0
 Keeps the current under 50uA.
@@ -205,7 +199,7 @@ L Device:R R7
 U 1 1 5FA0C9DE
 P 7250 3850
 F 0 "R7" H 7320 3896 50  0000 L CNN
-F 1 "3k" H 7320 3805 50  0000 L CNN
+F 1 "3.3k" H 7320 3805 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7180 3850 50  0001 C CNN
 F 3 "~" H 7250 3850 50  0001 C CNN
 	1    7250 3850
@@ -234,51 +228,10 @@ Wire Wire Line
 Connection ~ 7250 3550
 Text HLabel 8100 3550 2    50   Output Italic 0
 Vprobe
-Text HLabel 3750 3325 0    50   Input Italic 0
-P1in
 Text HLabel 3750 3725 0    50   Input Italic 0
 P2in
 Text HLabel 3750 4125 0    50   Input Italic 0
 P3in
-$Comp
-L power:PWR_FLAG #FLG0105
-U 1 1 5FBE4DBA
-P 4025 3325
-F 0 "#FLG0105" H 4025 3400 50  0001 C CNN
-F 1 "PWR_FLAG" H 4025 3498 50  0000 C CNN
-F 2 "" H 4025 3325 50  0001 C CNN
-F 3 "~" H 4025 3325 50  0001 C CNN
-	1    4025 3325
-	1    0    0    -1  
-$EndComp
-Connection ~ 4025 3325
-Wire Wire Line
-	4025 3325 4125 3325
-$Comp
-L power:PWR_FLAG #FLG0106
-U 1 1 5FBE57AC
-P 4025 3725
-F 0 "#FLG0106" H 4025 3800 50  0001 C CNN
-F 1 "PWR_FLAG" H 4025 3898 50  0000 C CNN
-F 2 "" H 4025 3725 50  0001 C CNN
-F 3 "~" H 4025 3725 50  0001 C CNN
-	1    4025 3725
-	1    0    0    -1  
-$EndComp
-Connection ~ 4025 3725
-Wire Wire Line
-	4025 3725 4125 3725
-$Comp
-L power:PWR_FLAG #FLG0107
-U 1 1 5FBE5B53
-P 3750 4125
-F 0 "#FLG0107" H 3750 4200 50  0001 C CNN
-F 1 "PWR_FLAG" H 3750 4298 50  0000 C CNN
-F 2 "" H 3750 4125 50  0001 C CNN
-F 3 "~" H 3750 4125 50  0001 C CNN
-	1    3750 4125
-	1    0    0    -1  
-$EndComp
 $Comp
 L Connector:TestPoint TP15
 U 1 1 5FC9DF1C
@@ -332,4 +285,42 @@ $EndComp
 Wire Wire Line
 	6100 2925 6100 3100
 Connection ~ 6100 4000
+Wire Wire Line
+	3750 4125 3900 4125
+Text HLabel 3750 3325 0    50   Input Italic 0
+P1in
+$Comp
+L Connector:TestPoint TP20
+U 1 1 5FD43418
+P 5175 3325
+F 0 "TP20" H 5233 3443 50  0000 L CNN
+F 1 "TestPoint" H 5233 3352 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5375 3325 50  0001 C CNN
+F 3 "~" H 5375 3325 50  0001 C CNN
+	1    5175 3325
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP21
+U 1 1 5FD43A26
+P 5175 3850
+F 0 "TP21" H 5233 3968 50  0000 L CNN
+F 1 "TestPoint" H 5233 3877 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5375 3850 50  0001 C CNN
+F 3 "~" H 5375 3850 50  0001 C CNN
+	1    5175 3850
+	1    0    0    -1  
+$EndComp
+Connection ~ 5175 3325
+Wire Wire Line
+	5175 3325 5300 3325
+Connection ~ 5175 3850
+Wire Wire Line
+	5175 3850 5750 3850
+Wire Wire Line
+	5025 3850 5175 3850
+Wire Wire Line
+	3750 3325 4125 3325
+Wire Wire Line
+	3750 3725 4125 3725
 $EndSCHEMATC
