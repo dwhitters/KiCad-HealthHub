@@ -41,7 +41,7 @@ $EndComp
 Wire Wire Line
 	1750 4275 1700 4275
 Text GLabel 1675 4275 0    50   Input ~ 0
-5V
+3.3V
 $Comp
 L Reference_Voltage:ADR4525 U1
 U 1 1 5F98E0E5
@@ -69,7 +69,7 @@ F 3 "" H 2400 4275 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 3350 2650 2    50   Input Italic 0
-5V
+3.3V
 Wire Wire Line
 	2350 4275 2400 4275
 Connection ~ 2400 4275
@@ -94,47 +94,25 @@ $EndSheet
 Text GLabel 2400 3900 2    50   Input Italic 0
 2.5V
 $Comp
-L Regulators:SP6641 U2
-U 1 1 5FB1FB38
-P 2500 2350
-F 0 "U2" H 2500 2465 50  0000 C CNN
-F 1 "SP6641" H 2500 2374 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 2500 2350 50  0001 C CNN
-F 3 "https://www.maxlinear.com/ds/sp6641_100_052605.pdf" H 2500 2350 50  0001 C CNN
-	1    2500 2350
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:L L1
 U 1 1 5FB201C3
-P 2000 2500
-F 0 "L1" V 2100 2500 50  0000 C CNN
-F 1 "10uH" V 1910 2500 50  0000 C CNN
-F 2 "Inductors:L_Sumida_CDRH5D28" H 2000 2500 50  0001 C CNN
-F 3 "products.sumida.com/products/pdf/CDRH5D28.pdf" H 2000 2500 50  0001 C CNN
-	1    2000 2500
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:D_Schottky D1
-U 1 1 5FB221FB
-P 2500 2100
-F 0 "D1" H 2500 1883 50  0000 C CNN
-F 1 "D_Schottky" H 2500 1974 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 2500 2100 50  0001 C CNN
-F 3 "https://toshiba.semicon-storage.com/info/docget.jsp?did=14564&prodName=CUS10S40" H 2500 2100 50  0001 C CNN
-	1    2500 2100
+P 1550 2400
+F 0 "L1" V 1650 2400 50  0000 C CNN
+F 1 "10uH" V 1460 2400 50  0000 C CNN
+F 2 "Inductors:L_Sumida_CDRH5D28" H 1550 2400 50  0001 C CNN
+F 3 "products.sumida.com/products/pdf/CDRH5D28.pdf" H 1550 2400 50  0001 C CNN
+	1    1550 2400
 	-1   0    0    1   
 $EndComp
 $Comp
 L Device:CP1 C1
 U 1 1 5FB22A08
-P 1600 2800
-F 0 "C1" H 1715 2846 50  0000 L CNN
-F 1 "100uF" H 1715 2755 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x5.3" H 1600 2800 50  0001 C CNN
-F 3 "~" H 1600 2800 50  0001 C CNN
-	1    1600 2800
+P 1650 2800
+F 0 "C1" H 1700 2900 50  0000 L CNN
+F 1 "100uF" H 1400 2700 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.3" H 1650 2800 50  0001 C CNN
+F 3 "~" H 1650 2800 50  0001 C CNN
+	1    1650 2800
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -143,32 +121,10 @@ U 1 1 5FB22EA7
 P 3350 2800
 F 0 "C3" H 3465 2846 50  0000 L CNN
 F 1 "100uF" H 3465 2755 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x5.3" H 3350 2800 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_5x5.3" H 3350 2800 50  0001 C CNN
 F 3 "~" H 3350 2800 50  0001 C CNN
 	1    3350 2800
 	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP1 C2
-U 1 1 5FB23B17
-P 2950 2800
-F 0 "C2" H 3065 2846 50  0000 L CNN
-F 1 "1uF" H 3065 2755 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2950 2800 50  0001 C CNN
-F 3 "~" H 2950 2800 50  0001 C CNN
-	1    2950 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R19
-U 1 1 5FB24D04
-P 3100 2650
-F 0 "R19" V 2893 2650 50  0000 C CNN
-F 1 "10" V 2984 2650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 3030 2650 50  0001 C CNN
-F 3 "~" H 3100 2650 50  0001 C CNN
-	1    3100 2650
-	0    1    1    0   
 $EndComp
 $Comp
 L Device:Battery_Cell BT1
@@ -181,96 +137,47 @@ F 3 "~" V 1400 2910 50  0001 C CNN
 	1    1400 2850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1400 2650 1600 2650
 $Comp
 L power:GND #PWR010
 U 1 1 5FB392BD
-P 2600 3000
-F 0 "#PWR010" H 2600 2750 50  0001 C CNN
-F 1 "GND" H 2605 2827 50  0000 C CNN
-F 2 "" H 2600 3000 50  0001 C CNN
-F 3 "" H 2600 3000 50  0001 C CNN
-	1    2600 3000
+P 2450 3000
+F 0 "#PWR010" H 2450 2750 50  0001 C CNN
+F 1 "GND" H 2455 2827 50  0000 C CNN
+F 2 "" H 2450 3000 50  0001 C CNN
+F 3 "" H 2450 3000 50  0001 C CNN
+	1    2450 3000
 	1    0    0    -1  
 $EndComp
-Connection ~ 2600 3000
 Wire Wire Line
 	1400 2950 1400 3000
-Connection ~ 1600 2650
-Wire Wire Line
-	1400 3000 1600 3000
-Wire Wire Line
-	1600 2650 1850 2650
-Wire Wire Line
-	1600 2950 1600 3000
-Connection ~ 1600 3000
-Wire Wire Line
-	1600 3000 2600 3000
-Wire Wire Line
-	1850 2500 1850 2650
-Connection ~ 1850 2650
-Wire Wire Line
-	1850 2650 2150 2650
-Wire Wire Line
-	2150 2500 2150 2100
-Wire Wire Line
-	2150 2100 2350 2100
-Connection ~ 2150 2500
-Wire Wire Line
-	2650 2100 3350 2100
-Wire Wire Line
-	3350 2100 3350 2325
-Wire Wire Line
-	3350 2650 3250 2650
-Wire Wire Line
-	2950 2650 2850 2650
-Connection ~ 2950 2650
-Wire Wire Line
-	2600 3000 2950 3000
-Wire Wire Line
-	2950 3000 2950 2950
-Connection ~ 3350 2650
 Wire Wire Line
 	3350 2950 3350 3000
 Wire Wire Line
-	3350 3000 2950 3000
+	3350 3000 3150 3000
 Connection ~ 2950 3000
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5FB7CDDB
-P 1600 2650
-F 0 "#FLG0101" H 1600 2725 50  0001 C CNN
-F 1 "PWR_FLAG" H 1600 2823 50  0000 C CNN
-F 2 "" H 1600 2650 50  0001 C CNN
-F 3 "~" H 1600 2650 50  0001 C CNN
-	1    1600 2650
+P 1400 2200
+F 0 "#FLG0101" H 1400 2275 50  0001 C CNN
+F 1 "PWR_FLAG" H 1400 2373 50  0000 C CNN
+F 2 "" H 1400 2200 50  0001 C CNN
+F 3 "~" H 1400 2200 50  0001 C CNN
+	1    1400 2200
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5FB7CFF8
-P 1600 3000
-F 0 "#FLG0102" H 1600 3075 50  0001 C CNN
-F 1 "PWR_FLAG" H 1600 3173 50  0000 C CNN
-F 2 "" H 1600 3000 50  0001 C CNN
-F 3 "~" H 1600 3000 50  0001 C CNN
-	1    1600 3000
+P 2950 3000
+F 0 "#FLG0102" H 2950 3075 50  0001 C CNN
+F 1 "PWR_FLAG" H 2950 3173 50  0000 C CNN
+F 2 "" H 2950 3000 50  0001 C CNN
+F 3 "~" H 2950 3000 50  0001 C CNN
+	1    2950 3000
 	-1   0    0    1   
 $EndComp
-$Comp
-L power:PWR_FLAG #FLG0103
-U 1 1 5FB7FFA0
-P 3350 2100
-F 0 "#FLG0103" H 3350 2175 50  0001 C CNN
-F 1 "PWR_FLAG" H 3350 2273 50  0000 C CNN
-F 2 "" H 3350 2100 50  0001 C CNN
-F 3 "~" H 3350 2100 50  0001 C CNN
-	1    3350 2100
-	1    0    0    -1  
-$EndComp
-Connection ~ 3350 2100
-Text GLabel 2150 2800 0    50   Input ~ 0
+Text GLabel 2050 2500 0    50   Input ~ 0
 SHDN
 Text GLabel 5650 4725 0    50   Input ~ 0
 SHDN
@@ -356,7 +263,7 @@ Wire Wire Line
 	5000 3300 5150 3300
 Wire Wire Line
 	5000 3400 5200 3400
-Text Notes 1850 3100 0    50   ~ 0
+Text Notes 1350 3150 0    50   ~ 0
 SHDN Active LOW\n
 Wire Wire Line
 	5200 3350 5400 3350
@@ -494,7 +401,7 @@ F 3 "" H 9625 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 9525 2800 0    50   Input ~ 0
-5V
+3.3V
 $Comp
 L Device:C C15
 U 1 1 5FBF2959
@@ -566,9 +473,9 @@ Wire Wire Line
 	10300 3600 10025 3600
 Connection ~ 10300 3600
 Text GLabel 10300 3300 1    50   Input ~ 0
-5V
+3.3V
 Text GLabel 10300 4050 3    50   Input ~ 0
-5V
+3.3V
 $Comp
 L power:GND #PWR016
 U 1 1 5FC0ADCB
@@ -628,7 +535,7 @@ Vout
 Text GLabel 4400 6100 0    50   Input ~ 0
 Vout
 Text GLabel 4700 5900 1    50   Input ~ 0
-5V
+3.3V
 $Comp
 L Device:R R26
 U 1 1 5FC7A644
@@ -787,29 +694,25 @@ Wire Wire Line
 $Comp
 L Connector:TestPoint TP4
 U 1 1 5FC8907B
-P 3350 2325
-F 0 "TP4" V 3304 2513 50  0000 L CNN
-F 1 "TestPoint" V 3395 2513 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 3550 2325 50  0001 C CNN
-F 3 "~" H 3550 2325 50  0001 C CNN
-	1    3350 2325
+P 3150 2350
+F 0 "TP4" V 3104 2538 50  0000 L CNN
+F 1 "TestPoint" V 3195 2538 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 3350 2350 50  0001 C CNN
+F 3 "~" H 3350 2350 50  0001 C CNN
+	1    3150 2350
 	0    1    1    0   
 $EndComp
-Connection ~ 3350 2325
-Wire Wire Line
-	3350 2325 3350 2650
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5FC8A574
-P 1400 2650
-F 0 "TP1" H 1458 2768 50  0000 L CNN
-F 1 "TestPoint" H 1458 2677 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 1600 2650 50  0001 C CNN
-F 3 "~" H 1600 2650 50  0001 C CNN
-	1    1400 2650
+P 1600 2200
+F 0 "TP1" H 1658 2318 50  0000 L CNN
+F 1 "TestPoint" H 1658 2227 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 1800 2200 50  0001 C CNN
+F 3 "~" H 1800 2200 50  0001 C CNN
+	1    1600 2200
 	1    0    0    -1  
 $EndComp
-Connection ~ 1400 2650
 $Comp
 L Connector:TestPoint TP7
 U 1 1 5FC8DB2C
@@ -882,10 +785,6 @@ F 3 "~" H 3550 3000 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Connection ~ 3350 3000
-Text GLabel 1400 2650 0    50   Input ~ 0
-Vbatt
-Text GLabel 5000 4000 3    50   Input ~ 0
-Vbatt
 $Comp
 L Device:C C24
 U 1 1 5FD00F60
@@ -916,7 +815,7 @@ Vbatt
 Text GLabel 9025 3800 0    50   Input ~ 0
 2.5V
 Text GLabel 2100 6500 0    50   Input ~ 0
-5V
+3.3V
 $Comp
 L Connector_Generic:Conn_01x03 J2
 U 1 1 5FCF854F
@@ -958,4 +857,97 @@ Wire Wire Line
 	10300 3600 10775 3600
 Wire Wire Line
 	10575 3275 10575 3700
+$Comp
+L Device:C C2
+U 1 1 5FD5C986
+P 1875 2800
+F 0 "C2" H 1925 2900 50  0000 L CNN
+F 1 "2.2uF" H 1900 2700 50  0000 L CNN
+F 2 "" H 1913 2650 50  0001 C CNN
+F 3 "~" H 1875 2800 50  0001 C CNN
+	1    1875 2800
+	1    0    0    -1  
+$EndComp
+Connection ~ 1650 2650
+Wire Wire Line
+	1650 2950 1650 3000
+Connection ~ 1650 3000
+Wire Wire Line
+	1650 3000 1875 3000
+Wire Wire Line
+	1875 2950 1875 3000
+Connection ~ 1875 3000
+Wire Wire Line
+	1875 3000 2450 3000
+Wire Wire Line
+	1650 2650 1875 2650
+$Comp
+L Regulators:LTC3531 U2
+U 1 1 5FD78879
+P 2450 2350
+F 0 "U2" H 2450 2765 50  0000 C CNN
+F 1 "LTC3531" H 2450 2674 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23-6" H 2400 2450 50  0001 C CNN
+F 3 "" H 2400 2450 50  0001 C CNN
+	1    2450 2350
+	1    0    0    -1  
+$EndComp
+Text GLabel 5000 4000 3    50   Input ~ 0
+3.3V
+Wire Wire Line
+	1400 2650 1650 2650
+Wire Wire Line
+	1400 3000 1650 3000
+$Comp
+L Device:C C16
+U 1 1 5FD9E1EE
+P 3150 2800
+F 0 "C16" H 3000 2875 50  0000 L CNN
+F 1 "1uF" H 3000 2725 50  0000 L CNN
+F 2 "" H 3188 2650 50  0001 C CNN
+F 3 "~" H 3150 2800 50  0001 C CNN
+	1    3150 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 2650 3350 2650
+Wire Wire Line
+	1400 2650 1400 2200
+Wire Wire Line
+	1400 2200 1600 2200
+Connection ~ 1400 2650
+Wire Wire Line
+	2050 2400 1700 2400
+Wire Wire Line
+	1700 2400 1700 2550
+Wire Wire Line
+	1700 2550 1550 2550
+Wire Wire Line
+	1700 2250 1700 2300
+Wire Wire Line
+	1700 2300 2050 2300
+Wire Wire Line
+	1550 2250 1700 2250
+Connection ~ 1600 2200
+Wire Wire Line
+	1600 2200 2050 2200
+Connection ~ 1400 2200
+Wire Wire Line
+	3150 2950 3150 3000
+Connection ~ 3150 3000
+Wire Wire Line
+	3150 3000 2950 3000
+Wire Wire Line
+	2450 2700 2450 3000
+Connection ~ 2450 3000
+Wire Wire Line
+	2450 3000 2950 3000
+Wire Wire Line
+	3150 2650 3150 2350
+Wire Wire Line
+	3150 2350 2850 2350
+Connection ~ 3150 2650
+Connection ~ 3150 2350
+Text GLabel 1400 2650 0    50   Input ~ 0
+Vbatt
 $EndSCHEMATC

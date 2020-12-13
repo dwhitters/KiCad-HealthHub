@@ -120,7 +120,7 @@ F 3 "~" H 4975 1450 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Text GLabel 4975 1675 0    50   Input Italic 0
-5V
+3.3V
 Wire Wire Line
 	5125 1450 5625 1450
 Wire Wire Line
@@ -218,7 +218,7 @@ Text GLabel 8375 4400 0    50   Input Italic 0
 Text GLabel 7300 4300 1    50   Input Italic 0
 2.5V
 Text GLabel 8775 3925 0    50   Input Italic 0
-5V
+3.3V
 Text Label 6650 4600 2    50   Italic 0
 Vn
 Connection ~ 7300 4600
@@ -431,7 +431,7 @@ F 3 "" H 4325 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 4325 4575 0    50   Input Italic 0
-5V
+3.3V
 Wire Wire Line
 	4850 5150 4725 5150
 Wire Wire Line

@@ -167,7 +167,7 @@ F 3 "" H 6100 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 6100 2925 0    50   Input Italic 0
-5V
+3.3V
 $Comp
 L Device:R R6
 U 1 1 5FA0AABB
