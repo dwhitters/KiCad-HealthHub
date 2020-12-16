@@ -225,6 +225,28 @@ X ~ 2 0 -150 130 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Device_D_Schottky
+#
+DEF Device_D_Schottky D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "Device_D_Schottky" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ TO-???*
+ *_Diode_*
+ *SingleDiode*
+ D_*
+$ENDFPLIST
+DRAW
+P 2 0 1 0 50 0 -50 0 N
+P 4 0 1 10 50 50 50 -50 -50 0 50 50 N
+P 6 0 1 10 -75 25 -75 50 -50 50 -50 -50 -25 -50 -25 -25 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Device_L
 #
 DEF Device_L L 0 40 N N 1 F N
@@ -357,31 +379,24 @@ X 3 3 -200 -100 100 R 40 40 0 0 P
 ENDDRAW
 ENDDEF
 #
-# dk_Transistors-Bipolar-BJT-Single_MMBT3904-7-F
+# Transistor_BJT_BC858
 #
-DEF dk_Transistors-Bipolar-BJT-Single_MMBT3904-7-F Q 0 0 Y Y 1 F N
-F0 "Q" -126 166 60 H V L CNN
-F1 "dk_Transistors-Bipolar-BJT-Single_MMBT3904-7-F" 206 0 60 V V C CNN
-F2 "digikey-footprints:SOT-23-3" 200 200 60 H I L CNN
-F3 "https://www.diodes.com/assets/Datasheets/ds30036.pdf" 200 300 60 H I L CNN
-F4 "MMBT3904-FDICT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "MMBT3904-7-F" 200 500 60 H I L CNN "MPN"
-F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
-F7 "Transistors - Bipolar (BJT) - Single" 200 700 60 H I L CNN "Family"
-F8 "https://www.diodes.com/assets/Datasheets/ds30036.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/diodes-incorporated/MMBT3904-7-F/MMBT3904-FDICT-ND/815727" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "TRANS NPN 40V 0.2A SMD SOT23-3" 200 1000 60 H I L CNN "Description"
-F11 "Diodes Incorporated" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
+DEF Transistor_BJT_BC858 Q 0 0 Y N 1 F N
+F0 "Q" 200 75 50 H V L CNN
+F1 "Transistor_BJT_BC858" 200 0 50 H V L CNN
+F2 "Package_TO_SOT_SMD:SOT-23" 200 -75 50 H I L CIN
+F3 "" 0 0 50 H I L CNN
+ALIAS BC808 BC856 BC857 BC858 BC859 BC860 MMBT3906
+$FPLIST
+ SOT?23*
+$ENDFPLIST
 DRAW
-C 0 0 128 0 1 0 f
-P 2 0 1 0 -150 0 -100 0 N
-P 2 0 1 0 -140 0 0 0 N
-P 2 0 1 0 0 -50 100 -100 N
-P 2 0 1 0 0 50 100 100 N
-P 2 0 1 0 0 100 0 -100 N
-P 4 0 1 0 60 -50 80 -90 40 -100 60 -50 F
-X B 1 -200 0 100 R 50 50 1 1 I
+C 50 0 111 0 1 10 N
+P 2 0 1 0 25 25 100 100 N
+P 3 0 1 0 25 -25 100 -100 100 -100 N
+P 3 0 1 20 25 75 25 -75 25 -75 N
+P 5 0 1 0 90 -70 70 -90 50 -50 90 -70 90 -70 F
+X B 1 -200 0 225 R 50 50 1 1 I
 X E 2 100 -200 100 U 50 50 1 1 P
 X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW

@@ -83,14 +83,6 @@ F3 "P2in" I L 6075 3350 50
 F4 "P3in" I L 6075 3500 50 
 F5 "P1in" I L 6075 3200 50 
 $EndSheet
-$Sheet
-S 7575 2800 1075 1400
-U 5F9F8E33
-F0 "Filters_And_Gain" 50
-F1 "Filters_and_Gain.sch" 50
-F2 "Vout" O R 8650 3500 50 
-F3 "Vin" I L 7575 3500 50 
-$EndSheet
 Text GLabel 2400 3900 2    50   Input Italic 0
 2.5V
 $Comp
@@ -340,7 +332,7 @@ L Device:R R21
 U 1 1 5FBCD069
 P 2400 6650
 F 0 "R21" H 2470 6696 50  0000 L CNN
-F 1 "100" H 2470 6605 50  0000 L CNN
+F 1 "56" H 2470 6605 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 2330 6650 50  0001 C CNN
 F 3 "~" H 2400 6650 50  0001 C CNN
 	1    2400 6650
@@ -364,18 +356,14 @@ P 2250 6500
 F 0 "D2" H 2243 6245 50  0000 C CNN
 F 1 "LED" H 2243 6336 50  0000 C CNN
 F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2250 6500 50  0001 C CNN
-F 3 "http://www.qt-brightek.com/datasheet/QBLP601_series.pdf" H 2250 6500 50  0001 C CNN
+F 3 "https://fscdn.rohm.com/en/products/databook/datasheet/opto/led/chip_mono/sml-e1-e.pdf" H 2250 6500 50  0001 C CNN
 	1    2250 6500
 	-1   0    0    1   
 $EndComp
 Wire Notes Line
-	2975 6125 2975 7225
-Wire Notes Line
-	2975 7225 1625 7225
+	3175 6125 3175 7225
 Wire Notes Line
 	1625 7225 1625 6125
-Wire Notes Line
-	1625 6125 2975 6125
 Text Notes 1725 7175 0    50   ~ 0
 Power Indicator
 $Comp
@@ -510,31 +498,11 @@ Wire Wire Line
 	7050 3500 7575 3500
 Text Notes 2350 6325 0    50   ~ 0
 Green\n
-$Comp
-L dk_Transistors-Bipolar-BJT-Single:MMBT3904-7-F Q1
-U 1 1 5FC76954
-P 4600 6100
-F 0 "Q1" H 4788 6153 60  0000 L CNN
-F 1 "MMBT3904-7-F" H 4788 6047 60  0000 L CNN
-F 2 "digikey-footprints:SOT-23-3" H 4800 6300 60  0001 L CNN
-F 3 "https://www.diodes.com/assets/Datasheets/ds30036.pdf" H 4800 6400 60  0001 L CNN
-F 4 "MMBT3904-FDICT-ND" H 4800 6500 60  0001 L CNN "Digi-Key_PN"
-F 5 "MMBT3904-7-F" H 4800 6600 60  0001 L CNN "MPN"
-F 6 "Discrete Semiconductor Products" H 4800 6700 60  0001 L CNN "Category"
-F 7 "Transistors - Bipolar (BJT) - Single" H 4800 6800 60  0001 L CNN "Family"
-F 8 "https://www.diodes.com/assets/Datasheets/ds30036.pdf" H 4800 6900 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/diodes-incorporated/MMBT3904-7-F/MMBT3904-FDICT-ND/815727" H 4800 7000 60  0001 L CNN "DK_Detail_Page"
-F 10 "TRANS NPN 40V 0.2A SMD SOT23-3" H 4800 7100 60  0001 L CNN "Description"
-F 11 "Diodes Incorporated" H 4800 7200 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 4800 7300 60  0001 L CNN "Status"
-	1    4600 6100
-	1    0    0    -1  
-$EndComp
 Text GLabel 8850 3500 1    50   Input ~ 0
 Vout
 Text GLabel 4400 6100 0    50   Input ~ 0
 Vout
-Text GLabel 4700 5900 1    50   Input ~ 0
+Text GLabel 5150 5800 2    50   Input ~ 0
 3.3V
 $Comp
 L Device:R R26
@@ -572,13 +540,9 @@ F 3 "" H 4700 6900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Notes Line
-	4000 5650 5575 5650
-Wire Notes Line
-	5575 5650 5575 7275
+	4000 5450 5575 5450
 Wire Notes Line
 	5575 7275 4000 7275
-Wire Notes Line
-	4000 7275 4000 5650
 Text Notes 4375 7225 0    50   ~ 0
 Heartbeat Indicator\n
 Wire Wire Line
@@ -772,7 +736,6 @@ Wire Wire Line
 	4700 6300 4875 6300
 Wire Wire Line
 	4875 6300 4875 6325
-Connection ~ 4700 6300
 $Comp
 L Connector:TestPoint TP19
 U 1 1 5FCD9479
@@ -950,4 +913,47 @@ Connection ~ 3150 2650
 Connection ~ 3150 2350
 Text GLabel 1400 2650 0    50   Input ~ 0
 Vbatt
+Wire Notes Line
+	1625 6125 3175 6125
+Wire Notes Line
+	1625 7225 3175 7225
+$Comp
+L Transistor_BJT:BC858 Q?
+U 1 1 5FDAC112
+P 4600 6100
+F 0 "Q?" H 4791 6146 50  0000 L CNN
+F 1 "BC858" H 4791 6055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 4800 6025 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC860-D.pdf" H 4600 6100 50  0001 L CNN
+	1    4600 6100
+	1    0    0    -1  
+$EndComp
+Connection ~ 4700 6300
+Wire Wire Line
+	4700 5800 4700 5900
+Wire Notes Line
+	4000 5450 4000 7275
+Wire Notes Line
+	5575 5450 5575 7275
+$Comp
+L Device:D_Schottky D?
+U 1 1 5FDC078D
+P 5000 5800
+F 0 "D?" H 5000 6017 50  0000 C CNN
+F 1 "D_Schottky" H 5000 5926 50  0000 C CNN
+F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5000 5800 50  0001 C CNN
+F 3 "~" H 5000 5800 50  0001 C CNN
+	1    5000 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 5800 4850 5800
+$Sheet
+S 7575 2800 1075 1400
+U 5F9F8E33
+F0 "Filters_And_Gain" 50
+F1 "Filters_and_Gain.sch" 50
+F2 "Vout" O R 8650 3500 50 
+F3 "Vin" I L 7575 3500 50 
+$EndSheet
 $EndSCHEMATC

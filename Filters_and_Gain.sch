@@ -130,28 +130,15 @@ L Device:R R14
 U 1 1 5FA20BBE
 P 5625 2875
 F 0 "R14" H 5695 2921 50  0000 L CNN
-F 1 "56k" H 5695 2830 50  0000 L CNN
+F 1 "1k" H 5695 2830 50  0000 L CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5555 2875 50  0001 C CNN
 F 3 "~" H 5625 2875 50  0001 C CNN
 	1    5625 2875
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:R R13
-U 1 1 5FA2106F
-P 5625 2575
-F 0 "R13" H 5695 2621 50  0000 L CNN
-F 1 "2.7k" H 5695 2530 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5555 2575 50  0001 C CNN
-F 3 "~" H 5625 2575 50  0001 C CNN
-	1    5625 2575
-	1    0    0    -1  
-$EndComp
 Connection ~ 5625 3025
 Wire Wire Line
 	5625 1450 5625 1775
-Wire Wire Line
-	5625 2300 5625 2425
 Connection ~ 5625 2300
 Wire Wire Line
 	4575 2400 4575 3025
@@ -558,4 +545,6 @@ F 3 "~" H 2450 5050 50  0001 C CNN
 	1    2450 5050
 	0    1    1    0   
 $EndComp
+Wire Wire Line
+	5625 2300 5625 2725
 $EndSCHEMATC
