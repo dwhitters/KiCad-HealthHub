@@ -1,0 +1,203 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 4
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BLE:BT832 U8
+U 1 1 5FDDA282
+P 5875 3800
+F 0 "U8" H 5575 4725 50  0000 C CNN
+F 1 "BT832" H 5350 4725 50  0000 C CNN
+F 2 "" H 5425 4850 50  0001 C CNN
+F 3 "" H 5425 4850 50  0001 C CNN
+	1    5875 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 5FDDBF25
+P 6150 2725
+F 0 "#PWR016" H 6150 2475 50  0001 C CNN
+F 1 "GND" H 6155 2552 50  0000 C CNN
+F 2 "" H 6150 2725 50  0001 C CNN
+F 3 "" H 6150 2725 50  0001 C CNN
+	1    6150 2725
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C23
+U 1 1 5FDE1113
+P 5975 2500
+F 0 "C23" V 5723 2500 50  0000 C CNN
+F 1 "4.7u" V 5814 2500 50  0000 C CNN
+F 2 "" H 6013 2350 50  0001 C CNN
+F 3 "~" H 5975 2500 50  0001 C CNN
+	1    5975 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6125 2500 6150 2500
+Wire Wire Line
+	6150 2500 6150 2700
+Wire Wire Line
+	6150 2700 5925 2700
+Wire Wire Line
+	5925 2700 5925 2850
+Connection ~ 6150 2700
+Wire Wire Line
+	6150 2700 6150 2725
+Wire Wire Line
+	5825 2850 5825 2500
+Text GLabel 5825 2500 0    50   Input ~ 0
+3.3V
+$Comp
+L Oscillators:CC7V_T1A_32.768KHZ U7
+U 1 1 5FDE5F2E
+P 2325 3275
+F 0 "U7" H 2325 3500 50  0000 C CNN
+F 1 "CC7V_T1A_32.768KHZ" H 2500 3400 50  0000 C CNN
+F 2 "Oscillators:CC7V_T1A" H 2325 3275 50  0001 C CNN
+F 3 "https://www.microcrystal.com/fileadmin/Media/Products/32kHz/Datasheet/CC7V-T1A.pdf" H 2325 3275 50  0001 C CNN
+	1    2325 3275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C15
+U 1 1 5FDE6A17
+P 2075 3425
+F 0 "C15" H 2190 3471 50  0000 L CNN
+F 1 "12p" H 2190 3380 50  0000 L CNN
+F 2 "" H 2113 3275 50  0001 C CNN
+F 3 "~" H 2075 3425 50  0001 C CNN
+	1    2075 3425
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C19
+U 1 1 5FDE72D2
+P 2575 3425
+F 0 "C19" H 2690 3471 50  0000 L CNN
+F 1 "12p" H 2690 3380 50  0000 L CNN
+F 2 "" H 2613 3275 50  0001 C CNN
+F 3 "~" H 2575 3425 50  0001 C CNN
+	1    2575 3425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2075 3575 2325 3575
+$Comp
+L power:GND #PWR015
+U 1 1 5FDEC3F8
+P 2325 3575
+F 0 "#PWR015" H 2325 3325 50  0001 C CNN
+F 1 "GND" H 2330 3402 50  0000 C CNN
+F 2 "" H 2325 3575 50  0001 C CNN
+F 3 "" H 2325 3575 50  0001 C CNN
+	1    2325 3575
+	1    0    0    -1  
+$EndComp
+Connection ~ 2325 3575
+Wire Wire Line
+	2325 3575 2575 3575
+Wire Wire Line
+	2075 3275 2075 3000
+Wire Wire Line
+	2075 3000 2975 3000
+Wire Wire Line
+	2975 3000 2975 3250
+Wire Wire Line
+	2975 3250 5125 3250
+Connection ~ 2075 3275
+Wire Wire Line
+	5125 3350 2900 3350
+Wire Wire Line
+	2900 3350 2900 3275
+Wire Wire Line
+	2900 3275 2575 3275
+Connection ~ 2575 3275
+$Comp
+L Device:C C21
+U 1 1 5FDEDF53
+P 5975 2100
+F 0 "C21" V 5723 2100 50  0000 C CNN
+F 1 "100n" V 5814 2100 50  0000 C CNN
+F 2 "" H 6013 1950 50  0001 C CNN
+F 3 "~" H 5975 2100 50  0001 C CNN
+	1    5975 2100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5825 2100 5825 2500
+Connection ~ 5825 2500
+Wire Wire Line
+	6150 2500 6150 2100
+Wire Wire Line
+	6150 2100 6125 2100
+Connection ~ 6150 2500
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5FDF10A5
+P 4625 3650
+F 0 "J2" H 4733 3831 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 4733 3740 50  0000 C CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 4625 3650 50  0001 C CNN
+F 3 "~" H 4625 3650 50  0001 C CNN
+	1    4625 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4825 3650 5125 3650
+Wire Wire Line
+	5125 3750 4825 3750
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5FDF3EC3
+P 7225 3250
+F 0 "J3" H 7197 3132 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 7197 3223 50  0000 R CNN
+F 2 "Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical" H 7225 3250 50  0001 C CNN
+F 3 "~" H 7225 3250 50  0001 C CNN
+	1    7225 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4700 3650 4725 3650
+Text Label 6650 3150 0    50   ~ 0
+UART_TX
+Wire Wire Line
+	6625 3150 7025 3150
+Wire Wire Line
+	6625 3250 7025 3250
+Text Label 6650 3250 0    50   ~ 0
+UART_RX
+$Comp
+L Connector:Conn_ARM_JTAG_SWD_10 J4
+U 1 1 5FDF9704
+P 9500 3650
+F 0 "J4" H 9057 3696 50  0000 R CNN
+F 1 "Conn_ARM_JTAG_SWD_10" H 9057 3605 50  0000 R CNN
+F 2 "" H 9500 3650 50  0001 C CNN
+F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 9150 2400 50  0001 C CNN
+	1    9500 3650
+	1    0    0    -1  
+$EndComp
+Text HLabel 3100 3950 0    50   Input ~ 0
+Signal
+Wire Wire Line
+	5125 3450 3275 3450
+Wire Wire Line
+	3275 3450 3275 3950
+Wire Wire Line
+	3275 3950 3100 3950
+$EndSCHEMATC

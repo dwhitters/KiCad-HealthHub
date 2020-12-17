@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title "Power"
 Date ""
 Rev ""
@@ -366,142 +366,10 @@ Wire Notes Line
 	1625 7225 1625 6125
 Text Notes 1725 7175 0    50   ~ 0
 Power Indicator
-$Comp
-L Analog_ADC:ADS1015IDGS U7
-U 1 1 5FBE58F1
-P 9625 3600
-F 0 "U7" H 9825 4075 50  0000 C CNN
-F 1 "ADS1015IDGS" H 9250 4075 50  0000 C CNN
-F 2 "Package_SO:TSSOP-10_3x3mm_P0.5mm" H 9625 3100 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ads1015.pdf" H 9575 2700 50  0001 C CNN
-	1    9625 3600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR015
-U 1 1 5FBF14F2
-P 9625 4000
-F 0 "#PWR015" H 9625 3750 50  0001 C CNN
-F 1 "GND" H 9630 3827 50  0000 C CNN
-F 2 "" H 9625 4000 50  0001 C CNN
-F 3 "" H 9625 4000 50  0001 C CNN
-	1    9625 4000
-	1    0    0    -1  
-$EndComp
-Text GLabel 9525 2800 0    50   Input ~ 0
-3.3V
-$Comp
-L Device:C C15
-U 1 1 5FBF2959
-P 9775 2800
-F 0 "C15" V 9523 2800 50  0000 C CNN
-F 1 "0.1u" V 9614 2800 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 9813 2650 50  0001 C CNN
-F 3 "~" H 9775 2800 50  0001 C CNN
-	1    9775 2800
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9625 2800 9625 2975
-Wire Wire Line
-	9625 2800 9525 2800
-Connection ~ 9625 2800
-$Comp
-L power:GND #PWR017
-U 1 1 5FBFA432
-P 10325 2800
-F 0 "#PWR017" H 10325 2550 50  0001 C CNN
-F 1 "GND" H 10330 2627 50  0000 C CNN
-F 2 "" H 10325 2800 50  0001 C CNN
-F 3 "" H 10325 2800 50  0001 C CNN
-	1    10325 2800
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R23
-U 1 1 5FC01BDB
-P 10025 3250
-F 0 "R23" H 10095 3296 50  0000 L CNN
-F 1 "10k" H 10095 3205 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 9955 3250 50  0001 C CNN
-F 3 "~" H 10025 3250 50  0001 C CNN
-	1    10025 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R25
-U 1 1 5FC054BC
-P 10300 3900
-F 0 "R25" H 10230 3854 50  0000 R CNN
-F 1 "3.3k" H 10230 3945 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 10230 3900 50  0001 C CNN
-F 3 "~" H 10300 3900 50  0001 C CNN
-	1    10300 3900
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R24
-U 1 1 5FC0648F
-P 10300 3450
-F 0 "R24" H 10230 3404 50  0000 R CNN
-F 1 "3.3k" H 10230 3495 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 10230 3450 50  0001 C CNN
-F 3 "~" H 10300 3450 50  0001 C CNN
-	1    10300 3450
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	10025 3700 10300 3700
-Wire Wire Line
-	10300 3700 10300 3750
-Wire Wire Line
-	10300 3700 10575 3700
-Connection ~ 10300 3700
-Wire Wire Line
-	10300 3600 10025 3600
-Connection ~ 10300 3600
-Text GLabel 10300 3300 1    50   Input ~ 0
-3.3V
-Text GLabel 10300 4050 3    50   Input ~ 0
-3.3V
-$Comp
-L power:GND #PWR016
-U 1 1 5FC0ADCB
-P 10025 3800
-F 0 "#PWR016" H 10025 3550 50  0001 C CNN
-F 1 "GND" H 10030 3627 50  0000 C CNN
-F 2 "" H 10025 3800 50  0001 C CNN
-F 3 "" H 10025 3800 50  0001 C CNN
-	1    10025 3800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8650 3500 8925 3500
-Text GLabel 9225 3600 0    50   Input ~ 0
-2.5V
-Wire Wire Line
-	9225 3700 9025 3700
-Wire Wire Line
-	9225 3800 9025 3800
-Text Notes 8825 4425 0    50   ~ 0
-Tie to supply to reduce leakage currents.
-Wire Wire Line
-	9925 2800 10325 2800
-Wire Wire Line
-	10025 3100 10025 2975
-Wire Wire Line
-	10025 2975 9625 2975
-Connection ~ 9625 2975
-Wire Wire Line
-	9625 2975 9625 3100
 Wire Wire Line
 	7050 3500 7575 3500
 Text Notes 2350 6325 0    50   ~ 0
 Green\n
-Text GLabel 8850 3500 1    50   Input ~ 0
-Vout
-Text GLabel 4400 6100 0    50   Input ~ 0
-Vout
 Text GLabel 5150 5800 2    50   Input ~ 0
 3.3V
 $Comp
@@ -692,46 +560,6 @@ Wire Wire Line
 	5025 4650 5650 4650
 Wire Wire Line
 	5650 4725 5650 4650
-$Comp
-L Connector:TestPoint TP14
-U 1 1 5FC95E35
-P 10775 3275
-F 0 "TP14" H 10833 3393 50  0000 L CNN
-F 1 "TestPoint" H 10833 3302 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 10975 3275 50  0001 C CNN
-F 3 "~" H 10975 3275 50  0001 C CNN
-	1    10775 3275
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:TestPoint TP13
-U 1 1 5FC9653A
-P 10575 3275
-F 0 "TP13" H 10633 3393 50  0000 L CNN
-F 1 "TestPoint" H 10633 3302 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 10775 3275 50  0001 C CNN
-F 3 "~" H 10775 3275 50  0001 C CNN
-	1    10575 3275
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	10775 3275 10775 3600
-$Comp
-L Connector:TestPoint TP12
-U 1 1 5FCA6AF9
-P 8925 3325
-F 0 "TP12" H 8983 3443 50  0000 L CNN
-F 1 "TestPoint" H 8983 3352 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9125 3325 50  0001 C CNN
-F 3 "~" H 9125 3325 50  0001 C CNN
-	1    8925 3325
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8925 3325 8925 3500
-Connection ~ 8925 3500
-Wire Wire Line
-	8925 3500 9225 3500
 Wire Wire Line
 	4700 6300 4875 6300
 Wire Wire Line
@@ -773,35 +601,8 @@ F 3 "" H 1700 4575 50  0001 C CNN
 	1    1700 4575
 	1    0    0    -1  
 $EndComp
-Text GLabel 9025 3700 0    50   Input ~ 0
-Vbatt
-Text GLabel 9025 3800 0    50   Input ~ 0
-2.5V
 Text GLabel 2100 6500 0    50   Input ~ 0
 3.3V
-$Comp
-L Connector_Generic:Conn_01x03 J2
-U 1 1 5FCF854F
-P 10975 3700
-F 0 "J2" H 11055 3742 50  0000 L CNN
-F 1 "Conn_01x03" H 11055 3651 50  0000 L CNN
-F 2 "Connector_PinHeader_2.00mm:PinHeader_1x03_P2.00mm_Vertical" H 10975 3700 50  0001 C CNN
-F 3 "~" H 10975 3700 50  0001 C CNN
-	1    10975 3700
-	1    0    0    -1  
-$EndComp
-Connection ~ 10775 3600
-$Comp
-L power:GND #PWR020
-U 1 1 5FCF90A6
-P 10775 3800
-F 0 "#PWR020" H 10775 3550 50  0001 C CNN
-F 1 "GND" H 10780 3627 50  0000 C CNN
-F 2 "" H 10775 3800 50  0001 C CNN
-F 3 "" H 10775 3800 50  0001 C CNN
-	1    10775 3800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6075 3200 5750 3200
 Connection ~ 5750 3200
@@ -813,13 +614,6 @@ Connection ~ 5850 3350
 Wire Wire Line
 	6075 3500 5975 3500
 Connection ~ 5975 3500
-Connection ~ 10575 3700
-Wire Wire Line
-	10575 3700 10775 3700
-Wire Wire Line
-	10300 3600 10775 3600
-Wire Wire Line
-	10575 3275 10575 3700
 $Comp
 L Device:C C2
 U 1 1 5FD5C986
@@ -878,7 +672,6 @@ Wire Wire Line
 	1400 2650 1400 2200
 Wire Wire Line
 	1400 2200 1600 2200
-Connection ~ 1400 2650
 Wire Wire Line
 	2050 2400 1700 2400
 Wire Wire Line
@@ -911,17 +704,15 @@ Wire Wire Line
 	3150 2350 2850 2350
 Connection ~ 3150 2650
 Connection ~ 3150 2350
-Text GLabel 1400 2650 0    50   Input ~ 0
-Vbatt
 Wire Notes Line
 	1625 6125 3175 6125
 Wire Notes Line
 	1625 7225 3175 7225
 $Comp
-L Transistor_BJT:BC858 Q?
+L Transistor_BJT:BC858 Q1
 U 1 1 5FDAC112
 P 4600 6100
-F 0 "Q?" H 4791 6146 50  0000 L CNN
+F 0 "Q1" H 4791 6146 50  0000 L CNN
 F 1 "BC858" H 4791 6055 50  0000 L CNN
 F 2 "Package_TO_SOT_SMD:SOT-23" H 4800 6025 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/BC860-D.pdf" H 4600 6100 50  0001 L CNN
@@ -936,10 +727,10 @@ Wire Notes Line
 Wire Notes Line
 	5575 5450 5575 7275
 $Comp
-L Device:D_Schottky D?
+L Device:D_Schottky D1
 U 1 1 5FDC078D
 P 5000 5800
-F 0 "D?" H 5000 6017 50  0000 C CNN
+F 0 "D1" H 5000 6017 50  0000 C CNN
 F 1 "D_Schottky" H 5000 5926 50  0000 C CNN
 F 2 "Diode_SMD:D_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 5000 5800 50  0001 C CNN
 F 3 "~" H 5000 5800 50  0001 C CNN
@@ -956,4 +747,17 @@ F1 "Filters_and_Gain.sch" 50
 F2 "Vout" O R 8650 3500 50 
 F3 "Vin" I L 7575 3500 50 
 $EndSheet
+$Sheet
+S 9075 2800 1075 1400
+U 5FDD9C20
+F0 "Micro" 50
+F1 "Micro.sch" 50
+F2 "Signal" I L 9075 3500 50 
+$EndSheet
+Wire Wire Line
+	9075 3500 8650 3500
+Text GLabel 8875 3500 1    50   Input ~ 0
+Signal
+Text GLabel 4400 6100 0    50   Input ~ 0
+Signal
 $EndSCHEMATC
