@@ -614,17 +614,6 @@ Connection ~ 5850 3350
 Wire Wire Line
 	6075 3500 5975 3500
 Connection ~ 5975 3500
-$Comp
-L Device:C C2
-U 1 1 5FD5C986
-P 1875 2800
-F 0 "C2" H 1925 2900 50  0000 L CNN
-F 1 "2.2uF" H 1900 2700 50  0000 L CNN
-F 2 "" H 1913 2650 50  0001 C CNN
-F 3 "~" H 1875 2800 50  0001 C CNN
-	1    1875 2800
-	1    0    0    -1  
-$EndComp
 Connection ~ 1650 2650
 Wire Wire Line
 	1650 2950 1650 3000
@@ -661,7 +650,7 @@ U 1 1 5FD9E1EE
 P 3150 2800
 F 0 "C16" H 3000 2875 50  0000 L CNN
 F 1 "1uF" H 3000 2725 50  0000 L CNN
-F 2 "" H 3188 2650 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.3" H 3188 2650 50  0001 C CNN
 F 3 "~" H 3150 2800 50  0001 C CNN
 	1    3150 2800
 	1    0    0    -1  
@@ -760,4 +749,18 @@ Text GLabel 8875 3500 1    50   Input ~ 0
 Signal
 Text GLabel 4400 6100 0    50   Input ~ 0
 Signal
+Text GLabel 1400 2650 0    50   Input ~ 0
+Vbatt
+Connection ~ 1400 2650
+$Comp
+L Device:CP1 C2
+U 1 1 5FE0A857
+P 1875 2800
+F 0 "C2" H 1990 2846 50  0000 L CNN
+F 1 "2.2uF" H 1990 2755 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_4x5.7" H 1875 2800 50  0001 C CNN
+F 3 "~" H 1875 2800 50  0001 C CNN
+	1    1875 2800
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
