@@ -423,4 +423,8 @@ Wire Wire Line
 Wire Wire Line
 	7075 3075 7075 3125
 NoConn ~ 8825 2775
+Text Label 3850 3825 0    50   ~ 0
+NFC+
+Text Label 3850 3925 0    50   ~ 0
+NFC-
 $EndSCHEMATC

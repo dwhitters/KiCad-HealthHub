@@ -137,8 +137,6 @@ F 3 "~" H 5625 2875 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Connection ~ 5625 3025
-Wire Wire Line
-	5625 1450 5625 1775
 Connection ~ 5625 2300
 Wire Wire Line
 	4575 2400 4575 3025
@@ -292,20 +290,6 @@ Wire Wire Line
 Connection ~ 3175 2200
 Wire Wire Line
 	3175 2200 3575 2200
-$Comp
-L Connector:TestPoint TP18
-U 1 1 5FCA32EA
-P 5625 1775
-F 0 "TP18" V 5579 1963 50  0000 L CNN
-F 1 "TestPoint" V 5670 1963 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 5825 1775 50  0001 C CNN
-F 3 "~" H 5825 1775 50  0001 C CNN
-	1    5625 1775
-	0    1    1    0   
-$EndComp
-Connection ~ 5625 1775
-Wire Wire Line
-	5625 1775 5625 2300
 $Comp
 L Device:C C20
 U 1 1 5FCDCCC4
@@ -547,4 +531,6 @@ F 3 "~" H 2450 5050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5625 2300 5625 2725
+Wire Wire Line
+	5625 1450 5625 2300
 $EndSCHEMATC
