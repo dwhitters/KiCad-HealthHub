@@ -14,17 +14,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Fanstel-modules:BT832L U8
-U 1 1 5FE05A84
-P 5675 3575
-F 0 "U8" H 5675 4629 45  0000 C CNN
-F 1 "BT832L" H 5675 4545 45  0000 C CNN
-F 2 "Fanstel_modules:BT832-BT832L" H 5755 3725 20  0001 C CNN
-F 3 "" H 5725 3575 60  0001 C CNN
-	1    5675 3575
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector:Conn_01x08_Male J3
 U 1 1 5FE0D1DC
 P 5600 5325
@@ -90,11 +79,6 @@ F 3 "" H 4725 4825 50  0001 C CNN
 	1    4725 4825
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4525 4825 4625 4825
-Wire Wire Line
-	4625 4825 4725 4825
-Connection ~ 4625 4825
 Connection ~ 4725 4825
 Wire Wire Line
 	4825 4825 4725 4825
@@ -122,9 +106,9 @@ F 3 "~" H 3575 3825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4275 3825 3775 3825
+	4275 3825 4150 3825
 Wire Wire Line
-	3775 3925 4275 3925
+	3775 3925 3825 3925
 Wire Wire Line
 	4275 3925 4275 3975
 $Comp
@@ -192,16 +176,11 @@ Wire Wire Line
 	3575 3525 3325 3525
 Connection ~ 3325 3525
 Wire Wire Line
-	4300 3225 4275 3225
-Wire Wire Line
 	3925 3225 3925 2950
 Wire Wire Line
 	3925 2950 3075 2950
 Wire Wire Line
 	3075 2950 3075 3225
-Connection ~ 4275 3225
-Wire Wire Line
-	4275 3225 3925 3225
 Connection ~ 3075 3225
 Wire Wire Line
 	3575 3225 3900 3225
@@ -269,7 +248,6 @@ Wire Wire Line
 	4300 2650 4275 2650
 Wire Wire Line
 	4275 2650 4275 2925
-Connection ~ 4275 2925
 Wire Wire Line
 	4200 2350 4300 2350
 Text GLabel 4250 2350 1    50   Input ~ 0
@@ -427,4 +405,68 @@ Text Label 3850 3825 0    50   ~ 0
 NFC+
 Text Label 3850 3925 0    50   ~ 0
 NFC-
+$Comp
+L Device:C C27
+U 1 1 5FF23D29
+P 4150 4275
+F 0 "C27" H 4265 4321 50  0000 L CNN
+F 1 "1" H 4265 4230 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4188 4125 50  0001 C CNN
+F 3 "~" H 4150 4275 50  0001 C CNN
+	1    4150 4275
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C26
+U 1 1 5FF2493A
+P 3825 4275
+F 0 "C26" H 3940 4321 50  0000 L CNN
+F 1 "1" H 3940 4230 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3863 4125 50  0001 C CNN
+F 3 "~" H 3825 4275 50  0001 C CNN
+	1    3825 4275
+	1    0    0    -1  
+$EndComp
+Connection ~ 4275 2925
+Connection ~ 4275 3225
+Wire Wire Line
+	4275 3225 3925 3225
+Wire Wire Line
+	4300 3225 4275 3225
+Connection ~ 4625 4825
+Wire Wire Line
+	4625 4825 4725 4825
+Wire Wire Line
+	4525 4825 4625 4825
+$Comp
+L Fanstel-modules:BT832L U8
+U 1 1 5FE05A84
+P 5675 3575
+F 0 "U8" H 5675 4629 45  0000 C CNN
+F 1 "BT832L" H 5675 4545 45  0000 C CNN
+F 2 "Fanstel_modules:BT832-BT832L" H 5755 3725 20  0001 C CNN
+F 3 "" H 5725 3575 60  0001 C CNN
+	1    5675 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3825 3925 3825 4125
+Connection ~ 3825 3925
+Wire Wire Line
+	3825 3925 4275 3925
+Wire Wire Line
+	4150 4125 4150 3825
+Connection ~ 4150 3825
+Wire Wire Line
+	4150 3825 3775 3825
+Wire Wire Line
+	3825 4425 3975 4425
+Wire Wire Line
+	3975 4425 3975 4825
+Wire Wire Line
+	3975 4825 4525 4825
+Connection ~ 3975 4425
+Wire Wire Line
+	3975 4425 4150 4425
+Connection ~ 4525 4825
 $EndSCHEMATC
