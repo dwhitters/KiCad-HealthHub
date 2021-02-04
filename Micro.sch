@@ -352,8 +352,8 @@ $Comp
 L Connector:TestPoint TP22
 U 1 1 5FF492F1
 P 8825 3275
-F 0 "TP22" V 8775 3325 50  0000 C CNN
-F 1 "TestPoint" V 8825 3650 50  0000 C CNN
+F 0 "TP22" V 8725 3400 50  0000 C CNN
+F 1 "TestPoint" V 8900 3500 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9025 3275 50  0001 C CNN
 F 3 "~" H 9025 3275 50  0001 C CNN
 	1    8825 3275
@@ -395,9 +395,9 @@ F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresigh
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	8825 2975 7075 2975
+	8825 2975 8150 2975
 Wire Wire Line
-	8825 3075 7075 3075
+	8825 3075 8250 3075
 Wire Wire Line
 	7075 3075 7075 3125
 NoConn ~ 8825 2775
@@ -469,4 +469,61 @@ Connection ~ 3975 4425
 Wire Wire Line
 	3975 4425 4150 4425
 Connection ~ 4525 4825
+$Comp
+L Device:R R24
+U 1 1 601D1E80
+P 8150 2825
+F 0 "R24" H 8220 2871 50  0000 L CNN
+F 1 "100k" H 8220 2780 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8080 2825 50  0001 C CNN
+F 3 "~" H 8150 2825 50  0001 C CNN
+	1    8150 2825
+	1    0    0    -1  
+$EndComp
+Connection ~ 8150 2975
+Wire Wire Line
+	8150 2975 7075 2975
+Text GLabel 8150 2675 1    50   Input ~ 0
+3.3V
+$Comp
+L Device:R R25
+U 1 1 601D40AD
+P 8250 3225
+F 0 "R25" H 8050 3275 50  0000 L CNN
+F 1 "100k" H 8000 3175 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 8180 3225 50  0001 C CNN
+F 3 "~" H 8250 3225 50  0001 C CNN
+	1    8250 3225
+	1    0    0    -1  
+$EndComp
+Connection ~ 8250 3075
+Wire Wire Line
+	8250 3075 7075 3075
+$Comp
+L power:GND #PWR022
+U 1 1 601D52B6
+P 8250 3375
+F 0 "#PWR022" H 8250 3125 50  0001 C CNN
+F 1 "GND" H 8325 3250 50  0000 C CNN
+F 2 "" H 8250 3375 50  0001 C CNN
+F 3 "" H 8250 3375 50  0001 C CNN
+	1    8250 3375
+	1    0    0    -1  
+$EndComp
+Text GLabel 7700 4175 2    50   Input ~ 0
+3.3V
+$Comp
+L power:GND #PWR0101
+U 1 1 601E3062
+P 8150 3875
+F 0 "#PWR0101" H 8150 3625 50  0001 C CNN
+F 1 "GND" H 8225 3750 50  0000 C CNN
+F 2 "" H 8150 3875 50  0001 C CNN
+F 3 "" H 8150 3875 50  0001 C CNN
+	1    8150 3875
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3875 7700 3875
+Connection ~ 7700 3875
 $EndSCHEMATC
