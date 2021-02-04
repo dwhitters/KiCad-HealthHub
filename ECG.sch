@@ -113,7 +113,7 @@ U 1 1 5FB22EA7
 P 3350 2800
 F 0 "C3" H 3465 2846 50  0000 L CNN
 F 1 "100uF" H 3465 2755 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_5x5.3" H 3350 2800 50  0001 C CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.3" H 3350 2800 50  0001 C CNN
 F 3 "~" H 3350 2800 50  0001 C CNN
 	1    3350 2800
 	1    0    0    -1  
@@ -638,8 +638,6 @@ F 3 "" H 2400 2450 50  0001 C CNN
 	1    2450 2350
 	1    0    0    -1  
 $EndComp
-Text GLabel 5000 4000 3    50   Input ~ 0
-3.3V
 Wire Wire Line
 	1400 2650 1650 2650
 Wire Wire Line
@@ -763,4 +761,6 @@ F 3 "~" H 1875 2800 50  0001 C CNN
 	1    1875 2800
 	1    0    0    -1  
 $EndComp
+Text GLabel 5000 4000 3    50   Input ~ 0
+Vbatt
 $EndSCHEMATC
