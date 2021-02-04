@@ -122,7 +122,7 @@ F 3 "~" H 4125 3675 50  0001 C CNN
 	1    4125 3675
 	0    1    1    0   
 $EndComp
-Text GLabel 3775 3675 0    50   Input ~ 0
+Text GLabel 2200 3325 1    50   Input ~ 0
 Vbatt
 Wire Wire Line
 	3975 3675 3775 3675
@@ -322,17 +322,6 @@ Wire Wire Line
 	7625 3425 7075 3425
 Text GLabel 7925 3425 2    50   Input ~ 0
 3.3V
-$Comp
-L Connector:TestPoint TP14
-U 1 1 5FF3BCE7
-P 7075 3275
-F 0 "TP14" V 7025 3325 50  0000 C CNN
-F 1 "TestPoint" V 7075 3650 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 7275 3275 50  0001 C CNN
-F 3 "~" H 7275 3275 50  0001 C CNN
-	1    7075 3275
-	0    1    1    0   
-$EndComp
 NoConn ~ 8825 2875
 Connection ~ 9325 2375
 Wire Wire Line
@@ -347,17 +336,6 @@ F 2 "" H 9325 2375 50  0001 C CNN
 F 3 "" H 9325 2375 50  0001 C CNN
 	1    9325 2375
 	-1   0    0    1   
-$EndComp
-$Comp
-L Connector:TestPoint TP22
-U 1 1 5FF492F1
-P 8825 3275
-F 0 "TP22" V 8725 3400 50  0000 C CNN
-F 1 "TestPoint" V 8900 3500 50  0000 C CNN
-F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 9025 3275 50  0001 C CNN
-F 3 "~" H 9025 3275 50  0001 C CNN
-	1    8825 3275
-	0    -1   -1   0   
 $EndComp
 Text GLabel 9325 3575 3    50   Input ~ 0
 3.3V
@@ -526,4 +504,55 @@ $EndComp
 Wire Wire Line
 	8150 3875 7700 3875
 Connection ~ 7700 3875
+NoConn ~ 8825 3275
+$Comp
+L Device:Q_NMOS_DGS Q2
+U 1 1 60201D44
+P 2100 3525
+F 0 "Q2" H 2304 3571 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 2304 3480 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:TSOT-23" H 2300 3625 50  0001 C CNN
+F 3 "~" H 2100 3525 50  0001 C CNN
+	1    2100 3525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R27
+U 1 1 60208692
+P 1750 3525
+F 0 "R27" V 1543 3525 50  0000 C CNN
+F 1 "100" V 1634 3525 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1680 3525 50  0001 C CNN
+F 3 "~" H 1750 3525 50  0001 C CNN
+	1    1750 3525
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3775 3725 3775 3675
+Wire Wire Line
+	2200 3725 3775 3725
+Text GLabel 1600 3525 0    50   Input ~ 0
+3.3V
+$Comp
+L Device:R R28
+U 1 1 60220F36
+P 7225 3275
+F 0 "R28" V 7100 3425 50  0000 C CNN
+F 1 "2k" V 7109 3275 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7155 3275 50  0001 C CNN
+F 3 "~" H 7225 3275 50  0001 C CNN
+	1    7225 3275
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 602219D1
+P 7375 3275
+F 0 "#PWR024" H 7375 3025 50  0001 C CNN
+F 1 "GND" H 7450 3150 50  0000 C CNN
+F 2 "" H 7375 3275 50  0001 C CNN
+F 3 "" H 7375 3275 50  0001 C CNN
+	1    7375 3275
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
