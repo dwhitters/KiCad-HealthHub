@@ -197,22 +197,18 @@ $EndComp
 $Comp
 L Device:R R7
 U 1 1 5FA0C9DE
-P 7250 3850
-F 0 "R7" H 7320 3896 50  0000 L CNN
-F 1 "3.3k" H 7320 3805 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7180 3850 50  0001 C CNN
-F 3 "~" H 7250 3850 50  0001 C CNN
-	1    7250 3850
+P 7250 3400
+F 0 "R7" H 7320 3446 50  0000 L CNN
+F 1 "3.3k" H 7320 3355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7180 3400 50  0001 C CNN
+F 3 "~" H 7250 3400 50  0001 C CNN
+	1    7250 3400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6450 3550 6550 3550
 Wire Wire Line
 	7000 3550 7250 3550
-Wire Wire Line
-	7250 3550 7250 3700
-Wire Wire Line
-	7250 4000 6100 4000
 Text Notes 6725 4225 0    50   Italic 0
 AC Couple\nCutoff Frequency: 0.3Hz
 Wire Notes Line
@@ -284,7 +280,6 @@ F 3 "" H 6400 2925 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6100 2925 6100 3100
-Connection ~ 6100 4000
 Wire Wire Line
 	3750 4125 3900 4125
 Text HLabel 3750 3325 0    50   Input Italic 0
@@ -323,4 +318,6 @@ Wire Wire Line
 	3750 3325 4125 3325
 Wire Wire Line
 	3750 3725 4125 3725
+Text GLabel 7250 3250 1    50   Input Italic 0
+2.5V
 $EndSCHEMATC
