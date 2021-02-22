@@ -122,8 +122,6 @@ F 3 "~" H 4125 3675 50  0001 C CNN
 	1    4125 3675
 	0    1    1    0   
 $EndComp
-Text GLabel 2200 3325 1    50   Input ~ 0
-Vbatt
 Wire Wire Line
 	3975 3675 3775 3675
 $Comp
@@ -149,17 +147,6 @@ F 3 "~" H 3575 3375 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C15
-U 1 1 5FEA0A42
-P 3075 3375
-F 0 "C15" H 3190 3421 50  0000 L CNN
-F 1 "12p" H 3190 3330 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3113 3225 50  0001 C CNN
-F 3 "~" H 3075 3375 50  0001 C CNN
-	1    3075 3375
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR015
 U 1 1 5FEA1864
 P 3325 3525
@@ -171,17 +158,11 @@ F 3 "" H 3325 3525 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3075 3525 3325 3525
-Wire Wire Line
 	3575 3525 3325 3525
-Connection ~ 3325 3525
 Wire Wire Line
 	3925 3225 3925 2950
 Wire Wire Line
 	3925 2950 3075 2950
-Wire Wire Line
-	3075 2950 3075 3225
-Connection ~ 3075 3225
 Wire Wire Line
 	3575 3225 3900 3225
 Wire Wire Line
@@ -505,34 +486,8 @@ Wire Wire Line
 	8150 3875 7700 3875
 Connection ~ 7700 3875
 NoConn ~ 8825 3275
-$Comp
-L Device:Q_NMOS_DGS Q2
-U 1 1 60201D44
-P 2100 3525
-F 0 "Q2" H 2304 3571 50  0000 L CNN
-F 1 "Q_NMOS_DGS" H 2304 3480 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:TSOT-23" H 2300 3625 50  0001 C CNN
-F 3 "~" H 2100 3525 50  0001 C CNN
-	1    2100 3525
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R27
-U 1 1 60208692
-P 1750 3525
-F 0 "R27" V 1543 3525 50  0000 C CNN
-F 1 "100" V 1634 3525 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 1680 3525 50  0001 C CNN
-F 3 "~" H 1750 3525 50  0001 C CNN
-	1    1750 3525
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	3775 3725 3775 3675
-Wire Wire Line
-	2200 3725 3775 3725
-Text GLabel 1600 3525 0    50   Input ~ 0
-3.3V
 $Comp
 L Device:R R28
 U 1 1 60220F36
@@ -555,4 +510,54 @@ F 3 "" H 7375 3275 50  0001 C CNN
 	1    7375 3275
 	1    0    0    -1  
 $EndComp
+Connection ~ 3075 3225
+Connection ~ 3325 3525
+Wire Wire Line
+	3075 2950 3075 3225
+Wire Wire Line
+	2625 4125 2675 4125
+Connection ~ 2625 4125
+$Comp
+L power:GND #PWR026
+U 1 1 6035D78D
+P 2625 4125
+F 0 "#PWR026" H 2625 3875 50  0001 C CNN
+F 1 "GND" H 2630 3952 50  0000 C CNN
+F 2 "" H 2625 4125 50  0001 C CNN
+F 3 "" H 2625 4125 50  0001 C CNN
+	1    2625 4125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2575 4125 2625 4125
+$Comp
+L Switches:MIC9409 U9
+U 1 1 6035A63D
+P 2575 3675
+F 0 "U9" H 2625 3940 50  0000 C CNN
+F 1 "MIC9409" H 2625 3849 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6_Handsoldering" H 2575 3675 50  0001 C CNN
+F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/mic9409x.pdf" H 2575 3675 50  0001 C CNN
+	1    2575 3675
+	1    0    0    -1  
+$EndComp
+Text GLabel 2275 3775 0    50   Input ~ 0
+3.3V
+Wire Wire Line
+	3075 3525 3325 3525
+$Comp
+L Device:C C15
+U 1 1 5FEA0A42
+P 3075 3375
+F 0 "C15" H 3190 3421 50  0000 L CNN
+F 1 "12p" H 3190 3330 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 3113 3225 50  0001 C CNN
+F 3 "~" H 3075 3375 50  0001 C CNN
+	1    3075 3375
+	1    0    0    -1  
+$EndComp
+Text GLabel 2275 3675 0    50   Input ~ 0
+Vbatt
+Wire Wire Line
+	3775 3725 2975 3725
 $EndSCHEMATC
