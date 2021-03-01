@@ -698,13 +698,13 @@ Wire Notes Line
 $Comp
 L Transistor_BJT:BC858 Q1
 U 1 1 5FDAC112
-P 4600 6100
-F 0 "Q1" H 4791 6146 50  0000 L CNN
-F 1 "BC858" H 4791 6055 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 4800 6025 50  0001 L CIN
-F 3 "https://www.onsemi.com/pub/Collateral/BC860-D.pdf" H 4600 6100 50  0001 L CNN
-	1    4600 6100
-	1    0    0    -1  
+P 4800 6100
+F 0 "Q1" H 4991 6146 50  0000 L CNN
+F 1 "BC858" H 4991 6055 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5000 6025 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/BC860-D.pdf" H 4800 6100 50  0001 L CNN
+	1    4800 6100
+	-1   0    0    1   
 $EndComp
 Connection ~ 4700 6300
 Wire Wire Line
@@ -745,7 +745,7 @@ Wire Wire Line
 	9075 3500 8650 3500
 Text GLabel 8875 3500 1    50   Input ~ 0
 Signal
-Text GLabel 4400 6100 0    50   Input ~ 0
+Text GLabel 5000 6100 2    50   Input ~ 0
 Signal
 Text GLabel 1400 2650 0    50   Input ~ 0
 Vbatt
