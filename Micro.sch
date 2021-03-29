@@ -488,28 +488,6 @@ Connection ~ 7700 3875
 NoConn ~ 8825 3275
 Wire Wire Line
 	3775 3725 3775 3675
-$Comp
-L Device:R R28
-U 1 1 60220F36
-P 7225 3275
-F 0 "R28" V 7100 3425 50  0000 C CNN
-F 1 "2k" V 7109 3275 50  0000 C CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7155 3275 50  0001 C CNN
-F 3 "~" H 7225 3275 50  0001 C CNN
-	1    7225 3275
-	0    1    1    0   
-$EndComp
-$Comp
-L power:GND #PWR024
-U 1 1 602219D1
-P 7375 3275
-F 0 "#PWR024" H 7375 3025 50  0001 C CNN
-F 1 "GND" H 7450 3150 50  0000 C CNN
-F 2 "" H 7375 3275 50  0001 C CNN
-F 3 "" H 7375 3275 50  0001 C CNN
-	1    7375 3275
-	1    0    0    -1  
-$EndComp
 Connection ~ 3075 3225
 Connection ~ 3325 3525
 Wire Wire Line
@@ -560,4 +538,6 @@ Text GLabel 2275 3675 0    50   Input ~ 0
 Vbatt
 Wire Wire Line
 	3775 3725 2975 3725
+Text GLabel 7075 3275 2    50   Input ~ 0
+LEAD_DETECT
 $EndSCHEMATC
