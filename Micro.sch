@@ -519,8 +519,6 @@ F 3 "https://ww1.microchip.com/downloads/en/DeviceDoc/mic9409x.pdf" H 2575 3675 
 	1    2575 3675
 	1    0    0    -1  
 $EndComp
-Text GLabel 2275 3775 0    50   Input ~ 0
-3.3V
 Wire Wire Line
 	3075 3525 3325 3525
 $Comp
@@ -540,4 +538,6 @@ Wire Wire Line
 	3775 3725 2975 3725
 Text GLabel 7075 3275 2    50   Input ~ 0
 LEAD_DETECT
+Text GLabel 2275 3775 0    50   Input ~ 0
+SHDN
 $EndSCHEMATC
