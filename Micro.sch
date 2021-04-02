@@ -285,21 +285,6 @@ Text Label 7100 3725 0    50   ~ 0
 UART_TX
 Text Label 7100 3625 0    50   ~ 0
 UART_RX
-$Comp
-L Device:R R23
-U 1 1 5FF2C8D1
-P 7775 3425
-F 0 "R23" H 7845 3471 50  0000 L CNN
-F 1 "10k" H 7845 3380 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 7705 3425 50  0001 C CNN
-F 3 "~" H 7775 3425 50  0001 C CNN
-	1    7775 3425
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	7625 3425 7075 3425
-Text GLabel 7925 3425 2    50   Input ~ 0
-3.3V
 NoConn ~ 8825 2875
 Connection ~ 9325 2375
 Wire Wire Line
@@ -529,8 +514,6 @@ F 3 "~" H 3075 3375 50  0001 C CNN
 $EndComp
 Text GLabel 2275 3675 0    50   Input ~ 0
 Vbatt
-Text GLabel 7075 3275 2    50   Input ~ 0
-LEAD_DETECT
 Text GLabel 1950 4325 3    50   Input ~ 0
 SHDN
 $Comp
@@ -597,4 +580,9 @@ Wire Wire Line
 	2125 5625 6825 5625
 Wire Wire Line
 	6825 5625 6825 4825
+Text GLabel 7075 3425 2    50   Input ~ 0
+LEAD_DETECT
+NoConn ~ 7075 3275
+Text Notes 7125 3275 0    50   ~ 0
+Internally pulled up.
 $EndSCHEMATC
