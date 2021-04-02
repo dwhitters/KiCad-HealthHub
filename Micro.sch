@@ -25,14 +25,6 @@ F 3 "~" H 5600 5325 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5125 4825 5125 5125
-Wire Wire Line
-	5125 5125 5300 5125
-Wire Wire Line
-	5225 4825 5225 5075
-Wire Wire Line
-	5225 5075 5400 5075
-Wire Wire Line
 	5400 5075 5400 5125
 Wire Wire Line
 	5325 4825 5325 5025
@@ -585,4 +577,21 @@ LEAD_DETECT
 NoConn ~ 7075 3275
 Text Notes 7125 3275 0    50   ~ 0
 Internally pulled up.
+NoConn ~ 5125 4825
+$Comp
+L power:GND #PWR0102
+U 1 1 606869A5
+P 5100 5125
+F 0 "#PWR0102" H 5100 4875 50  0001 C CNN
+F 1 "GND" H 5105 4952 50  0000 C CNN
+F 2 "" H 5100 5125 50  0001 C CNN
+F 3 "" H 5100 5125 50  0001 C CNN
+	1    5100 5125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5300 5125 5100 5125
+Text GLabel 5400 5075 0    50   Input ~ 0
+3.3V
+NoConn ~ 5225 4825
 $EndSCHEMATC
