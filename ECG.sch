@@ -364,10 +364,6 @@ F 3 "" H 4700 6900 50  0001 C CNN
 	1    4700 6900
 	1    0    0    -1  
 $EndComp
-Wire Notes Line
-	4000 5450 5575 5450
-Wire Notes Line
-	5575 7275 4000 7275
 Text Notes 4375 7225 0    50   ~ 0
 Heartbeat Indicator\n
 Wire Wire Line
@@ -642,7 +638,7 @@ Wire Wire Line
 Wire Notes Line
 	4000 5450 4000 7275
 Wire Notes Line
-	5575 5450 5575 7275
+	5700 5450 5700 7275
 $Comp
 L Device:D_Schottky D1
 U 1 1 5FDC078D
@@ -675,7 +671,7 @@ Wire Wire Line
 	9075 3500 8650 3500
 Text GLabel 8875 3500 1    50   Input ~ 0
 Signal
-Text GLabel 5000 6100 2    50   Input ~ 0
+Text GLabel 5300 6100 2    50   Input ~ 0
 Signal
 Text GLabel 1400 2650 0    50   Input ~ 0
 Vbatt
@@ -749,4 +745,19 @@ Text GLabel 5675 4900 1    50   Input ~ 0
 Vbatt
 Text GLabel 5000 4000 3    50   Input Italic 0
 3.3V
+$Comp
+L Device:R R23
+U 1 1 606EFEA9
+P 5150 6100
+F 0 "R23" V 5250 6075 50  0000 L CNN
+F 1 "33k" V 5050 6025 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 5080 6100 50  0001 C CNN
+F 3 "~" H 5150 6100 50  0001 C CNN
+	1    5150 6100
+	0    1    1    0   
+$EndComp
+Wire Notes Line
+	4000 5450 5700 5450
+Wire Notes Line
+	4000 7275 5700 7275
 $EndSCHEMATC
